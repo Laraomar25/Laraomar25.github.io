@@ -2,6 +2,7 @@
 
 Edit data.json, then run:  python3 build.py
 """
+import hashlib
 import json
 from html import escape
 from pathlib import Path
@@ -69,6 +70,12 @@ GH_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19
 DL_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'
 EYE_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>'
 STAR = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 63 21l21-4-4 21 17 12-17 13 4 21-21-4-13 17-13-17-21 4 4-21L3 50l17-12-4-21 21 4z"/></svg>'
+
+
+# ASSET_V
+def asset_v(name):
+    """Short hash of a file, so browsers fetch the new version after each change."""
+    return hashlib.md5((HERE / name).read_bytes()).hexdigest()[:8]
 
 
 def t(obj, lang):
@@ -288,7 +295,7 @@ def build(L):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v={asset_v("style.css")}">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -395,7 +402,7 @@ def build(L):
     <img alt="">
   </dialog>
 
-  <script src="main.js" defer></script>
+  <script src="main.js?v={asset_v("main.js")}" defer></script>
 </body>
 </html>
 '''
