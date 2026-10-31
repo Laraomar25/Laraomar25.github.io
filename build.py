@@ -319,8 +319,6 @@ def build(L):
         </dl>
       </div>
       <div class="hero-art reveal" aria-hidden="true">
-        <div class="star s1">{STAR}</div>
-        <div class="star s2">{STAR}</div>
         <div class="code-card" dir="ltr">
           <div class="code-bar"><i></i><i></i><i></i><span>lara.ts</span></div>
           <pre><code>{code}</code></pre>
