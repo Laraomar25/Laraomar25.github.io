@@ -233,10 +233,6 @@ def build(L):
     cv = contact.get("cv")
     cv_html = f'''
         <div class="cv-card reveal" id="cv">
-          <a class="cv-paper" href="{e(cv)}" target="_blank" rel="noopener">
-            <img src="images/cv-preview.jpg" alt="{u("cv_alt")}" loading="lazy" width="910" height="1287">
-            <span class="cv-badge" aria-hidden="true">PDF</span>{new_tab}
-          </a>
           <div class="cv-info">
             <p class="eyebrow">{u("cv_kicker")}</p>
             <h3>{u("cv_title")}</h3>

@@ -482,3 +482,4 @@ main { width: min(var(--wrap), calc(100% - 32px)); margin: 0 auto; }
 }
 .browser-bar span { min-width: 0; }
 .card3d, .card3d-inner, .face { min-width: 0; max-width: 100%; }
+.cv-card { grid-template-columns: minmax(0, 1fr); }
