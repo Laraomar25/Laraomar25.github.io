@@ -36,7 +36,7 @@
 
   <header class="top">
     <a class="logo" href="#main" aria-label="لارا العثماني"><span>LA</span></a>
-    <nav class="nav" aria-label="القائمة"><a href="#work">المشاريع</a><a href="#about">نبذة</a><a href="#skills">المهارات</a><a href="#contact">تواصل</a></nav>
+    <nav class="nav" aria-label="القائمة"><a href="#work">المشاريع</a><a href="#about">نبذة</a><a href="#cv">السيرة الذاتية</a><a href="#skills">المهارات</a><a href="#contact">تواصل</a></nav>
     <div class="langs" role="group" aria-label="اللغة" dir="ltr"><a href="./" hreflang="ar" lang="ar" class="on" aria-current="page">ع<span class="sr-only"> العربية</span></a><a href="en" hreflang="en" lang="en" class="">EN<span class="sr-only"> English</span></a><a href="tr" hreflang="tr" lang="tr" class="">TR<span class="sr-only"> Türkçe</span></a></div>
   </header>
 
@@ -65,7 +65,7 @@
           <pre><code><span class="ln">1</span><span class="k">const</span> <span class="v">lara</span> <span class="p">=</span> <span class="p">{</span>
 <span class="ln">2</span>  <span class="key">role</span><span class="p">:</span> <span class="s">"Computer Engineer"</span><span class="p">,</span>
 <span class="ln">3</span>  <span class="key">city</span><span class="p">:</span> <span class="s">"Istanbul"</span><span class="p">,</span>
-<span class="ln">4</span>  <span class="key">stack</span><span class="p">:</span> <span class="p">[</span><span class="s">"Java"</span><span class="p">, </span><span class="s">"Kotlin"</span><span class="p">, </span><span class="s">"Python"</span><span class="p">, </span><span class="s">"C#‎"</span><span class="p">],</span>
+<span class="ln">4</span>  <span class="key">stack</span><span class="p">:</span> <span class="p">[</span><span class="s">"Python"</span><span class="p">, </span><span class="s">"C#‎"</span><span class="p">, </span><span class="s">"Java"</span><span class="p">, </span><span class="s">"Kotlin"</span><span class="p">],</span>
 <span class="ln">5</span>  <span class="key">projects</span><span class="p">:</span> <span class="n">6</span><span class="p">,</span>
 <span class="ln">6</span>  <span class="key">build</span><span class="p">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s">"ideas → solutions"</span><span class="p">,</span>
 <span class="ln">7</span><span class="p">};</span><span class="caret" aria-hidden="true"></span></code></pre>
@@ -106,12 +106,12 @@
         <p class="kicker"><span class="dot"></span>مشروع بارز<span class="live">يعمل الآن</span></p>
         <h3 id="cosigning-t">CoSigning</h3>
         <p class="lead">منصة ترجمة باتجاهين بين لغة الإشارة الأمريكية (ASL) والكلام.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>يواجه الصم وضعاف السمع صعوبة في التواصل اليومي مع الأشخاص الذين لا يعرفون لغة الإشارة.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>من الكلام إلى الإشارة: يلتقط الموقع الجملة المنطوقة ويحوّلها إلى نص، ثم يعرض فيديو لكل إشارة بالترتيب. ومن الإشارة إلى الكلام: يحلّل نموذج تعلّم عميق (Transformer) فيديو الكاميرا أو فيديو مرفوعًا، فيستخرج حركة اليدين والجسم باستخدام MediaPipe وملامح الصورة باستخدام ViT، ثم يحوّل الإشارات إلى جملة إنجليزية تُقرأ بصوت مسموع.</p></div></div>
+        <details class="more"><summary>عرض التفاصيل<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>يواجه الصم وضعاف السمع صعوبة في التواصل اليومي مع الأشخاص الذين لا يعرفون لغة الإشارة.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>من الكلام إلى الإشارة: يلتقط الموقع الجملة المنطوقة ويحوّلها إلى نص، ثم يعرض فيديو لكل إشارة بالترتيب. ومن الإشارة إلى الكلام: يحلّل نموذج تعلّم عميق (Transformer) فيديو الكاميرا أو فيديو مرفوعًا، فيستخرج حركة اليدين والجسم باستخدام MediaPipe وملامح الصورة باستخدام ViT، ثم يحوّل الإشارات إلى جملة إنجليزية تُقرأ بصوت مسموع.</p></div><div class="ps ps-role"><h4>دوري</h4><p>مشروع مدعوم من TÜBİTAK ضمن برنامج 2209-A. طوّرت المنصة بالكامل، ووصلت دقة التعرّف على الإشارات إلى نحو 94٪.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="التقنيات"><li>Python</li><li>PyTorch</li><li>Vision Transformer (ViT)</li><li>MediaPipe</li><li>OpenCV</li><li>FastAPI</li><li>JavaScript</li><li>Web Speech API</li><li>HTML</li><li>CSS</li></ul>
         <div class="actions"><a class="btn-demo" href="https://laraomar25.github.io/CoSigning/" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>تجربة المشروع<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (يفتح في نافذة جديدة)</span></a><a class="btn-ghost" href="https://github.com/Laraomar25/CoSigning" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>الكود المصدري<span class="sr-only"> (يفتح في نافذة جديدة)</span></a></div>
       </div>
     </article>
-    <article class="proj reveal flip" id="employment-gap" style="--a1:#E9B872;--a2:#2BB3A8" aria-labelledby="employment-gap-t">
+    <article class="proj reveal" id="employment-gap" style="--a1:#E9B872;--a2:#2BB3A8" aria-labelledby="employment-gap-t">
       <div class="proj-media">
         <button class="card3d" type="button" aria-pressed="false"
                 data-front="اضغط لرؤية المشروع الحقيقي" data-back="اضغط للعودة إلى الرسمة">
@@ -134,7 +134,7 @@
         <p class="kicker"><span class="dot"></span>مشروع بارز<span class="live">يعمل الآن</span></p>
         <h3 id="employment-gap-t">دراسة فجوة التوظيف لدى خريجي التخصصات التقنية</h3>
         <p class="lead">دراسة لفجوة التوظيف لدى خريجي التخصصات التقنية ومخرجاتها الرقمية.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>يجد كثير من خريجي التخصصات التقنية في تركيا صعوبة في الحصول على أول وظيفة، ولا تتضح لهم الفجوة بين ما تعلّموه وما تطلبه الإعلانات فعلًا.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>حلّلنا 216 إعلان وظيفة تقنية من Kariyer.net وIndeed وEleman.net و405 منشورات للخريجين، ثم بنيت بوت تليجرام «Graduate Compass AI» يعرض النتائج ويقدّم أدوات عملية: تحليل المهارات، ومستكشف الإعلانات، وخارطة طريق لثلاثين يومًا، وفاحص السيرة الذاتية، ومقارنة التخصصات، و«اسأل المرصد» بإجابات موثقة المصادر.</p></div></div>
+        <details class="more"><summary>عرض التفاصيل<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>يجد كثير من خريجي التخصصات التقنية في تركيا صعوبة في الحصول على أول وظيفة، ولا تتضح لهم الفجوة بين ما تعلّموه وما تطلبه الإعلانات فعلًا.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>حلّلنا 216 إعلان وظيفة تقنية من Kariyer.net وIndeed وEleman.net و405 منشورات للخريجين، ثم بنيت بوت تليجرام «Graduate Compass AI» يعرض النتائج ويقدّم أدوات عملية: تحليل المهارات، ومستكشف الإعلانات، وخارطة طريق لثلاثين يومًا، وفاحص السيرة الذاتية، ومقارنة التخصصات، و«اسأل المرصد» بإجابات موثقة المصادر.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="التقنيات"><li>Python</li><li>python-telegram-bot</li><li>pandas</li><li>SQLite</li><li>Claude API</li><li>BM25</li></ul>
         <div class="actions"><a class="btn-demo" href="https://t.me/hasbyaallah_bot" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>جرّب البوت على تليجرام<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (يفتح في نافذة جديدة)</span></a></div>
       </div>
@@ -162,7 +162,7 @@
         <p class="kicker"><span class="dot"></span>مشروع بارز<span class="live">يعمل الآن</span></p>
         <h3 id="library-management-system-t">نظام إدارة مكتبة</h3>
         <p class="lead">تطبيق سطح مكتب لإدارة مكتبة: تسجيل الدخول وإنشاء الحسابات، وإضافة الكتب وتعديلها وحذفها مع صور أغلفتها، وإعارة الكتب وإرجاعها، ورسم بياني يوضّح توزيع الكتب حسب النوع.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>تتابع مكتبات كثيرة كتبها وإعاراتها يدويًا أو في جداول متفرقة، فيصعب معرفة النسخ المتوفرة ومن استعار أي كتاب ومتى يجب إرجاعه.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>بنيت تطبيق سطح مكتب بلغة C#‎ وقاعدة بيانات SQLite يجمع كل ذلك في مكان واحد: حسابات للدخول، وإدارة الكتب مع أغلفتها، وإعارة الكتب وإرجاعها مع تحديث عدد النسخ تلقائيًا، ورسم بياني لتوزيع الكتب حسب النوع. ثم أعدت بناءه نسخة ويب تفاعلية يمكن تجربتها من المتصفح مباشرة.</p></div></div>
+        <details class="more"><summary>عرض التفاصيل<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>المشكلة</h4><p>تتابع مكتبات كثيرة كتبها وإعاراتها يدويًا أو في جداول متفرقة، فيصعب معرفة النسخ المتوفرة ومن استعار أي كتاب ومتى يجب إرجاعه.</p></div><div class="ps ps-solution"><h4>الحل</h4><p>بنيت تطبيق سطح مكتب بلغة C#‎ وقاعدة بيانات SQLite يجمع كل ذلك في مكان واحد: حسابات للدخول، وإدارة الكتب مع أغلفتها، وإعارة الكتب وإرجاعها مع تحديث عدد النسخ تلقائيًا، ورسم بياني لتوزيع الكتب حسب النوع. ثم أعدت بناءه نسخة ويب تفاعلية يمكن تجربتها من المتصفح مباشرة.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="التقنيات"><li>C#‎</li><li>Windows Forms</li><li>.NET Framework</li><li>SQLite</li><li>JavaScript (web version)</li></ul>
         <div class="actions"><a class="btn-demo" href="https://laraomar25.github.io/library-management-system/" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>تجربة المشروع<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (يفتح في نافذة جديدة)</span></a><a class="btn-ghost" href="https://github.com/Laraomar25/library-management-system" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>الكود المصدري<span class="sr-only"> (يفتح في نافذة جديدة)</span></a></div>
       </div>
@@ -198,13 +198,67 @@
         <h2 id="about-t">نبذة عني</h2>
       </div>
       <div class="about-grid">
-        <p class="about-text reveal">خريجة هندسة حاسوب من جامعة كارابوك، مهتمة بتطوير البرمجيات وبناء حلول عملية.</p>
-        <ol class="timeline" aria-label="المسار">
-      <li class="reveal">
+        <div class="about-main">
+          <p class="about-text reveal">خريجة هندسة حاسوب من جامعة كارابوك، ولديّ خبرة عملية في تطوير الويب وتطبيقات ‎.NET وواجهات REST API وقواعد البيانات والأنظمة المعتمدة على الذكاء الاصطناعي. أتحدث العربية والتركية والإنجليزية بطلاقة، وأحب حلّ المشكلات وبناء حلول رقمية فعّالة.</p>
+          <div class="langs-box reveal"><h3>اللغات</h3><ul class="lg">
+          <li><span class="lg-name">العربية</span><span class="lg-level">اللغة الأم</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:100%"></i></span></li>
+          <li><span class="lg-name">التركية</span><span class="lg-level">بطلاقة</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:90%"></i></span></li>
+          <li><span class="lg-name">الإنجليزية</span><span class="lg-level">بطلاقة</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:90%"></i></span></li>
+          </ul></div>
+          
+        <div class="cv-card reveal" id="cv">
+          <a class="cv-paper" href="cv/Lara-Alothmani-CV.pdf" target="_blank" rel="noopener">
+            <img src="images/cv-preview.jpg" alt="معاينة السيرة الذاتية للارا العثماني" loading="lazy" width="910" height="1287">
+            <span class="cv-badge" aria-hidden="true">PDF</span><span class="sr-only"> (يفتح في نافذة جديدة)</span>
+          </a>
+          <div class="cv-info">
+            <p class="eyebrow">السيرة الذاتية</p>
+            <h3>سيرتي الذاتية كاملة</h3>
+            <p>صفحة واحدة: المشاريع والخبرة والتعليم والمهارات.</p>
+            <div class="cv-btns">
+              <a class="btn-demo" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>تحميل PDF</a>
+              <a class="btn-ghost" href="cv/Lara-Alothmani-CV.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>عرض<span class="sr-only"> (يفتح في نافذة جديدة)</span></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <ol class="timeline" aria-label="الخبرة والتعليم">
+      <li class="reveal tl-exp">
         <span class="tl-dot" aria-hidden="true"></span>
-        <p class="tl-tag">التعليم</p>
+        <p class="tl-tag">خبرة عملية<span class="tl-when" dir="ltr">يونيو – يوليو 2026</span></p>
+        <h3>متدرّبة تطوير برمجيات</h3>
+        <p class="tl-org">جامعة كارابوك</p>
+        <p class="tl-desc">طوّرت تطبيقًا متعدد الطبقات بـ C#‎/.NET باستخدام Entity Framework وSQL Server وREST API وJWT.</p>
+      </li>
+      <li class="reveal tl-exp">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">خبرة عملية<span class="tl-when" dir="ltr">يونيو – يوليو 2025</span></p>
+        <h3>متدرّبة تطوير ويب</h3>
+        <p class="tl-org">Mgs · إسطنبول</p>
+        <p class="tl-desc">ساهمت في تطوير الواجهات الأمامية والخلفية للمواقع، واختبار التطبيقات، وحل المشكلات التقنية.</p>
+      </li>
+      <li class="reveal tl-edu">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">التعليم<span class="tl-when" dir="ltr">2021 – 2026</span></p>
         <h3>بكالوريوس هندسة الحاسوب</h3>
         <p class="tl-org">جامعة كارابوك</p>
+        
+      </li>
+      <li class="reveal tl-cert">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">شهادة</p>
+        <h3>تصميم قواعد البيانات والبرمجة بـ SQL</h3>
+        <p class="tl-org">Oracle Academy</p>
+        
+      </li>
+      <li class="reveal tl-cert">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">شهادة</p>
+        <h3>Optimization Onramp</h3>
+        <p class="tl-org">MathWorks</p>
         
       </li>
         </ol>
@@ -219,15 +273,27 @@
       <div class="skills">
       <div class="skill reveal">
         <h3>لغات البرمجة</h3>
-        <ul dir="ltr"><li>Java</li><li>Kotlin</li><li>Python</li><li>C#‎</li></ul>
+        <ul dir="ltr"><li>Python</li><li>C#‎</li><li>Java</li><li>Kotlin</li></ul>
       </div>
       <div class="skill reveal">
         <h3>تطوير الويب</h3>
-        <ul dir="ltr"><li>HTML</li><li>CSS</li></ul>
+        <ul dir="ltr"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>الواجهات الخلفية</h3>
+        <ul dir="ltr"><li>.NET</li><li>Web API</li><li>REST API</li><li>JWT</li><li>Entity Framework</li></ul>
       </div>
       <div class="skill reveal">
         <h3>قواعد البيانات</h3>
-        <ul dir="ltr"><li>SQL</li></ul>
+        <ul dir="ltr"><li>SQL</li><li>MySQL</li><li>SQL Server</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>الذكاء الاصطناعي والرؤية</h3>
+        <ul dir="ltr"><li>OpenCV</li><li>MediaPipe</li><li>Vision Transformer</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>أدوات</h3>
+        <ul dir="ltr"><li>Postman</li><li>Blender</li></ul>
       </div>
       </div>
     </section>
@@ -242,7 +308,7 @@
         <div class="mail">
           <a class="mail-link" href="mailto:laraomar256@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">laraomar256@gmail.com</span></a>
           <button class="copy" type="button" data-copy="laraomar256@gmail.com" data-done="تم النسخ"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>نسخ</span></button>
-        </div><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>حسابي على GitHub<span class="sr-only"> (يفتح في نافذة جديدة)</span></a>
+        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>تحميل السيرة الذاتية</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>حسابي على GitHub<span class="sr-only"> (يفتح في نافذة جديدة)</span></a>
         </div>
       </div>
     </section>

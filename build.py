@@ -29,6 +29,16 @@ EXTRA = {
     "langs_count": {"ar": "لغات للموقع", "en": "site languages", "tr": "site dili"},
     "live_count": {"ar": "مشاريع يمكنك تجربتها", "en": "projects you can try", "tr": "denenebilir proje"},
     "flip_hint": {"ar": "اضغط لرؤية المشروع الحقيقي", "en": "Tap to see the real project", "tr": "Gerçek projeyi görmek için dokun"},
+    "cv_kicker": {"ar": "السيرة الذاتية", "en": "Résumé", "tr": "Özgeçmiş"},
+    "cv_title": {"ar": "سيرتي الذاتية كاملة", "en": "My full CV", "tr": "Özgeçmişimin tamamı"},
+    "cv_sub": {"ar": "صفحة واحدة: المشاريع والخبرة والتعليم والمهارات.", "en": "One page: projects, experience, education and skills.", "tr": "Tek sayfa: projeler, deneyim, eğitim ve yetenekler."},
+    "cv_view": {"ar": "عرض", "en": "View", "tr": "Görüntüle"},
+    "cv_download": {"ar": "تحميل PDF", "en": "Download PDF", "tr": "PDF indir"},
+    "cv_alt": {"ar": "معاينة السيرة الذاتية للارا العثماني", "en": "Preview of Lara Alothmani's CV", "tr": "Lara Alothmani'nin özgeçmiş önizlemesi"},
+    "nav_cv": {"ar": "السيرة الذاتية", "en": "CV", "tr": "Özgeçmiş"},
+    "exp_tag": {"ar": "خبرة عملية", "en": "Experience", "tr": "Deneyim"},
+    "cert_tag": {"ar": "شهادة", "en": "Certificate", "tr": "Sertifika"},
+    "langs_title": {"ar": "اللغات", "en": "Languages", "tr": "Diller"},
     "flip_back": {"ar": "اضغط للعودة إلى الرسمة", "en": "Tap to go back to the drawing", "tr": "Çizime dönmek için dokun"},
 }
 
@@ -55,6 +65,8 @@ CODE_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 
 MAIL_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>'
 COPY_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>'
 GH_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>'
+DL_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'
+EYE_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>'
 STAR = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 63 21l21-4-4 21 17 12-17 13 4 21-21-4-13 17-13-17-21 4 4-21L3 50l17-12-4-21 21 4z"/></svg>'
 
 
@@ -100,7 +112,7 @@ def build(L):
         for x in LANGS
     )
 
-    nav_items = [("work", "nav_projects"), ("about", "nav_about"), ("skills", "nav_skills"), ("contact", "nav_contact")]
+    nav_items = [("work", "nav_projects"), ("about", "nav_about"), ("cv", "nav_cv"), ("skills", "nav_skills"), ("contact", "nav_contact")]
     nav = "".join(f'<a href="#{a}">{u(k)}</a>' for a, k in nav_items)
 
     # ---------- hero code card ----------
@@ -161,7 +173,7 @@ def build(L):
                      f'<span class="pulse" aria-hidden="true"></span>{label}{ARROW}{new_tab}</a>')
         if p.get("code"):
             btns += f'<a class="btn-ghost" href="{e(p["code"])}" target="_blank" rel="noopener">{CODE_ICO}{u("code")}{new_tab}</a>'
-        flip = " flip" if i % 2 else ""
+        flip = ""
         return f'''
     <article class="proj reveal{flip}" id="{e(p["id"])}" style="--a1:{a1};--a2:{a2}" aria-labelledby="{e(p["id"])}-t">
       <div class="proj-media">{card3d(p, host, media) if art_for(p) else f"""
@@ -174,7 +186,7 @@ def build(L):
         <p class="kicker"><span class="dot"></span>{u("featured")}{f'<span class="live">{u("live")}</span>' if p.get("demo") else ""}</p>
         <h3 id="{e(p["id"])}-t">{e(t(p["title"], lang))}</h3>
         <p class="lead">{e(t(p.get("summary"), lang))}</p>
-        <div class="ps-wrap">{blocks}</div>
+        {f'''<details class="more"><summary>{u("details")}<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap">{blocks}</div></details>''' if blocks else ""}
         {f'<ul class="chips" dir="ltr" aria-label="{u("tech")}">{chips}</ul>' if chips else ""}
         <div class="actions">{btns}</div>
       </div>
@@ -196,14 +208,45 @@ def build(L):
         <ul dir="ltr">{"".join(f"<li>{e(x)}</li>" for x in g["items"])}</ul>
       </div>''' for g in D["skills"])
 
-    edu_html = "".join(f'''
-      <li class="reveal">
+    def tl_item(kind, tag, x):
+        period = t(x.get("period"), lang)
+        desc = t(x.get("description"), lang)
+        return f'''
+      <li class="reveal tl-{kind}">
         <span class="tl-dot" aria-hidden="true"></span>
-        <p class="tl-tag">{u("education")}</p>
+        <p class="tl-tag">{u(tag)}{f'<span class="tl-when" dir="ltr">{e(period)}</span>' if period else ""}</p>
         <h3>{e(t(x["title"], lang))}</h3>
-        <p class="tl-org">{e(t(x["org"], lang))}{f" · {e(x['period'])}" if x.get("period") else ""}</p>
-        {f'<p>{e(t(x.get("description"), lang))}</p>' if t(x.get("description"), lang) else ""}
-      </li>''' for x in D["education"])
+        <p class="tl-org">{e(t(x["org"], lang))}</p>
+        {f'<p class="tl-desc">{e(desc)}</p>' if desc else ""}
+      </li>'''
+
+    edu_html = (
+        "".join(tl_item("exp", "exp_tag", x) for x in D.get("experience", []))
+        + "".join(tl_item("edu", "education", x) for x in D["education"])
+        + "".join(tl_item("cert", "cert_tag", x) for x in D.get("certifications", []))
+    )
+
+    langs_html = "".join(f'''
+          <li><span class="lg-name">{e(t(x["name"], lang))}</span><span class="lg-level">{e(t(x["level"], lang))}</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:{int(x["pct"])}%"></i></span></li>''' for x in D.get("languages", []))
+
+    cv = contact.get("cv")
+    cv_html = f'''
+        <div class="cv-card reveal" id="cv">
+          <a class="cv-paper" href="{e(cv)}" target="_blank" rel="noopener">
+            <img src="images/cv-preview.jpg" alt="{u("cv_alt")}" loading="lazy" width="910" height="1287">
+            <span class="cv-badge" aria-hidden="true">PDF</span>{new_tab}
+          </a>
+          <div class="cv-info">
+            <p class="eyebrow">{u("cv_kicker")}</p>
+            <h3>{u("cv_title")}</h3>
+            <p>{u("cv_sub")}</p>
+            <div class="cv-btns">
+              <a class="btn-demo" href="{e(cv)}" download="Lara-Alothmani-CV.pdf">{DL_ICO}{u("cv_download")}</a>
+              <a class="btn-ghost" href="{e(cv)}" target="_blank" rel="noopener">{EYE_ICO}{u("cv_view")}{new_tab}</a>
+            </div>
+          </div>
+        </div>''' if cv else ""
 
     email = contact.get("email")
     contact_btns = ""
@@ -213,6 +256,8 @@ def build(L):
           <a class="mail-link" href="mailto:{e(email)}">{MAIL_ICO}<span dir="ltr">{e(email)}</span></a>
           <button class="copy" type="button" data-copy="{e(email)}" data-done="{u("copied")}">{COPY_ICO}<span>{u("copy")}</span></button>
         </div>'''
+    if cv:
+        contact_btns += f'<a class="btn-ghost light" href="{e(cv)}" download="Lara-Alothmani-CV.pdf">{DL_ICO}{u("cv")}</a>'
     if contact.get("github"):
         contact_btns += f'<a class="btn-ghost light" href="{e(contact["github"])}" target="_blank" rel="noopener">{GH_ICO}{u("github")}{new_tab}</a>'
 
@@ -306,7 +351,12 @@ def build(L):
         <h2 id="about-t">{u("about_title")}</h2>
       </div>
       <div class="about-grid">
-        <p class="about-text reveal">{e(t(D["about"], lang))}</p>
+        <div class="about-main">
+          <p class="about-text reveal">{e(t(D["about"], lang))}</p>
+          {f'''<div class="langs-box reveal"><h3>{u("langs_title")}</h3><ul class="lg">{langs_html}
+          </ul></div>''' if langs_html else ""}
+          {cv_html}
+        </div>
         <ol class="timeline" aria-label="{u("timeline_title")}">{edu_html}
         </ol>
       </div>

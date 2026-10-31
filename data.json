@@ -36,9 +36,9 @@
   "photo": null
  },
  "about": {
-  "ar": "خريجة هندسة حاسوب من جامعة كارابوك، مهتمة بتطوير البرمجيات وبناء حلول عملية.",
-  "en": "Computer Engineering graduate from Karabük University, interested in software development and building practical solutions.",
-  "tr": "Karabük Üniversitesi Bilgisayar Mühendisliği mezunuyum; yazılım geliştirme ve pratik çözümler üretmekle ilgileniyorum."
+  "ar": "خريجة هندسة حاسوب من جامعة كارابوك، ولديّ خبرة عملية في تطوير الويب وتطبيقات ‎.NET وواجهات REST API وقواعد البيانات والأنظمة المعتمدة على الذكاء الاصطناعي. أتحدث العربية والتركية والإنجليزية بطلاقة، وأحب حلّ المشكلات وبناء حلول رقمية فعّالة.",
+  "en": "Computer Engineering graduate from Karabük University with hands-on experience in web development, .NET applications, REST APIs, databases and AI-based systems. Fluent in Arabic, Turkish and English, I enjoy solving problems and building effective digital solutions.",
+  "tr": "Karabük Üniversitesi Bilgisayar Mühendisliği mezunuyum; web geliştirme, .NET uygulamaları, REST API'ler, veritabanları ve yapay zekâ tabanlı sistemlerde uygulamalı deneyimim var. Arapça, Türkçe ve İngilizceyi akıcı konuşuyorum; problem çözmeyi ve etkili dijital çözümler üretmeyi seviyorum."
  },
  "projects": [
   {
@@ -64,9 +64,9 @@
     "tr": "Konuşmadan işarete: site söylenen cümleyi yakalayıp metne çevirir ve her işaretin videosunu sırayla oynatır. İşaretten konuşmaya: derin öğrenmeye dayalı bir Transformer modeli kamera ya da yüklenen videoyu analiz eder; MediaPipe ile el ve vücut hareketlerini, ViT ile görsel özellikleri çıkarır ve işaretleri sesli okunan İngilizce bir cümleye dönüştürür."
    },
    "role": {
-    "ar": "",
-    "en": "",
-    "tr": ""
+    "ar": "مشروع مدعوم من TÜBİTAK ضمن برنامج 2209-A. طوّرت المنصة بالكامل، ووصلت دقة التعرّف على الإشارات إلى نحو 94٪.",
+    "en": "A TÜBİTAK 2209-A supported project. I developed the platform end to end and reached about 94% sign recognition accuracy.",
+    "tr": "TÜBİTAK 2209-A kapsamında desteklenen bir proje. Platformu baştan sona geliştirdim ve işaret tanımada yaklaşık %94 doğruluğa ulaştım."
    },
    "tech": [
     "Python",
@@ -242,10 +242,10 @@
     "tr": "Programlama dilleri"
    },
    "items": [
-    "Java",
-    "Kotlin",
     "Python",
-    "C#"
+    "C#",
+    "Java",
+    "Kotlin"
    ]
   },
   {
@@ -256,7 +256,23 @@
    },
    "items": [
     "HTML",
-    "CSS"
+    "CSS",
+    "JavaScript",
+    "PHP"
+   ]
+  },
+  {
+   "group": {
+    "ar": "الواجهات الخلفية",
+    "en": "Back-end",
+    "tr": "Arka yüz"
+   },
+   "items": [
+    ".NET",
+    "Web API",
+    "REST API",
+    "JWT",
+    "Entity Framework"
    ]
   },
   {
@@ -266,7 +282,32 @@
     "tr": "Veritabanları"
    },
    "items": [
-    "SQL"
+    "SQL",
+    "MySQL",
+    "SQL Server"
+   ]
+  },
+  {
+   "group": {
+    "ar": "الذكاء الاصطناعي والرؤية",
+    "en": "AI & computer vision",
+    "tr": "Yapay zekâ ve görüntü işleme"
+   },
+   "items": [
+    "OpenCV",
+    "MediaPipe",
+    "Vision Transformer"
+   ]
+  },
+  {
+   "group": {
+    "ar": "أدوات",
+    "en": "Tools",
+    "tr": "Araçlar"
+   },
+   "items": [
+    "Postman",
+    "Blender"
    ]
   }
  ],
@@ -282,7 +323,7 @@
     "en": "Karabük University",
     "tr": "Karabük Üniversitesi"
    },
-   "period": null,
+   "period": "2021 – 2026",
    "description": {
     "ar": "",
     "en": "",
@@ -296,7 +337,7 @@
   "email": "laraomar256@gmail.com",
   "linkedin": null,
   "github": "https://github.com/Laraomar25",
-  "cv": null
+  "cv": "cv/Lara-Alothmani-CV.pdf"
  },
  "ui": {
   "skip": {
@@ -480,9 +521,9 @@
    "tr": "Ben kimim"
   },
   "timeline_title": {
-   "ar": "المسار",
-   "en": "Path",
-   "tr": "Yolculuk"
+   "ar": "الخبرة والتعليم",
+   "en": "Experience & education",
+   "tr": "Deneyim ve eğitim"
   },
   "skills_kicker": {
    "ar": "أدواتي",
@@ -509,5 +550,110 @@
    "en": "Back to top",
    "tr": "Başa dön"
   }
- }
+ },
+ "experience": [
+  {
+   "title": {
+    "ar": "متدرّبة تطوير برمجيات",
+    "en": "Software Development Intern",
+    "tr": "Yazılım Geliştirme Stajyeri"
+   },
+   "org": {
+    "ar": "جامعة كارابوك",
+    "en": "Karabük University",
+    "tr": "Karabük Üniversitesi"
+   },
+   "period": {
+    "ar": "يونيو – يوليو 2026",
+    "en": "Jun – Jul 2026",
+    "tr": "Haziran – Temmuz 2026"
+   },
+   "description": {
+    "ar": "طوّرت تطبيقًا متعدد الطبقات بـ C#/.NET باستخدام Entity Framework وSQL Server وREST API وJWT.",
+    "en": "Built a layered C#/.NET application using Entity Framework, SQL Server, REST API and JWT.",
+    "tr": "Entity Framework, SQL Server, REST API ve JWT kullanarak katmanlı bir C#/.NET uygulaması geliştirdim."
+   }
+  },
+  {
+   "title": {
+    "ar": "متدرّبة تطوير ويب",
+    "en": "Web Development Intern",
+    "tr": "Web Geliştirme Stajyeri"
+   },
+   "org": {
+    "ar": "Mgs · إسطنبول",
+    "en": "Mgs · Istanbul",
+    "tr": "Mgs · İstanbul"
+   },
+   "period": {
+    "ar": "يونيو – يوليو 2025",
+    "en": "Jun – Jul 2025",
+    "tr": "Haziran – Temmuz 2025"
+   },
+   "description": {
+    "ar": "ساهمت في تطوير الواجهات الأمامية والخلفية للمواقع، واختبار التطبيقات، وحل المشكلات التقنية.",
+    "en": "Supported front-end and back-end web development, application testing and technical issue resolution.",
+    "tr": "Ön yüz ve arka yüz web geliştirme, uygulama testi ve teknik sorunların çözümünde destek verdim."
+   }
+  }
+ ],
+ "certifications": [
+  {
+   "title": {
+    "ar": "تصميم قواعد البيانات والبرمجة بـ SQL",
+    "en": "Database Design & Database Programming with SQL",
+    "tr": "Veritabanı Tasarımı ve SQL ile Veritabanı Programlama"
+   },
+   "org": "Oracle Academy"
+  },
+  {
+   "title": {
+    "ar": "Optimization Onramp",
+    "en": "Optimization Onramp",
+    "tr": "Optimization Onramp"
+   },
+   "org": "MathWorks"
+  }
+ ],
+ "languages": [
+  {
+   "name": {
+    "ar": "العربية",
+    "en": "Arabic",
+    "tr": "Arapça"
+   },
+   "level": {
+    "ar": "اللغة الأم",
+    "en": "Native",
+    "tr": "Ana dil"
+   },
+   "pct": 100
+  },
+  {
+   "name": {
+    "ar": "التركية",
+    "en": "Turkish",
+    "tr": "Türkçe"
+   },
+   "level": {
+    "ar": "بطلاقة",
+    "en": "Fluent",
+    "tr": "Akıcı"
+   },
+   "pct": 90
+  },
+  {
+   "name": {
+    "ar": "الإنجليزية",
+    "en": "English",
+    "tr": "İngilizce"
+   },
+   "level": {
+    "ar": "بطلاقة",
+    "en": "Fluent",
+    "tr": "Akıcı"
+   },
+   "pct": 90
+  }
+ ]
 }

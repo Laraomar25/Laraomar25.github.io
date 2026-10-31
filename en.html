@@ -36,7 +36,7 @@
 
   <header class="top">
     <a class="logo" href="#main" aria-label="Lara Alothmani"><span>LA</span></a>
-    <nav class="nav" aria-label="Menu"><a href="#work">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+    <nav class="nav" aria-label="Menu"><a href="#work">Projects</a><a href="#about">About</a><a href="#cv">CV</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
     <div class="langs" role="group" aria-label="Language" dir="ltr"><a href="./" hreflang="ar" lang="ar" class="">ع<span class="sr-only"> العربية</span></a><a href="en" hreflang="en" lang="en" class="on" aria-current="page">EN<span class="sr-only"> English</span></a><a href="tr" hreflang="tr" lang="tr" class="">TR<span class="sr-only"> Türkçe</span></a></div>
   </header>
 
@@ -65,7 +65,7 @@
           <pre><code><span class="ln">1</span><span class="k">const</span> <span class="v">lara</span> <span class="p">=</span> <span class="p">{</span>
 <span class="ln">2</span>  <span class="key">role</span><span class="p">:</span> <span class="s">"Computer Engineer"</span><span class="p">,</span>
 <span class="ln">3</span>  <span class="key">city</span><span class="p">:</span> <span class="s">"Istanbul"</span><span class="p">,</span>
-<span class="ln">4</span>  <span class="key">stack</span><span class="p">:</span> <span class="p">[</span><span class="s">"Java"</span><span class="p">, </span><span class="s">"Kotlin"</span><span class="p">, </span><span class="s">"Python"</span><span class="p">, </span><span class="s">"C#"</span><span class="p">],</span>
+<span class="ln">4</span>  <span class="key">stack</span><span class="p">:</span> <span class="p">[</span><span class="s">"Python"</span><span class="p">, </span><span class="s">"C#"</span><span class="p">, </span><span class="s">"Java"</span><span class="p">, </span><span class="s">"Kotlin"</span><span class="p">],</span>
 <span class="ln">5</span>  <span class="key">projects</span><span class="p">:</span> <span class="n">6</span><span class="p">,</span>
 <span class="ln">6</span>  <span class="key">build</span><span class="p">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s">"ideas → solutions"</span><span class="p">,</span>
 <span class="ln">7</span><span class="p">};</span><span class="caret" aria-hidden="true"></span></code></pre>
@@ -106,12 +106,12 @@
         <p class="kicker"><span class="dot"></span>Featured<span class="live">Live</span></p>
         <h3 id="cosigning-t">CoSigning</h3>
         <p class="lead">A two-way translation platform between American Sign Language (ASL) and speech.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Deaf and hard-of-hearing people struggle to communicate day to day with people who don&#x27;t know sign language.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>Speech to sign: the site captures a spoken sentence, turns it into text, and plays a video for each sign in order. Sign to speech: a deep-learning Transformer model analyses webcam or uploaded video, extracting hand and body movement with MediaPipe and visual features with ViT, then turns the signs into an English sentence that is read aloud.</p></div></div>
+        <details class="more"><summary>View details<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Deaf and hard-of-hearing people struggle to communicate day to day with people who don&#x27;t know sign language.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>Speech to sign: the site captures a spoken sentence, turns it into text, and plays a video for each sign in order. Sign to speech: a deep-learning Transformer model analyses webcam or uploaded video, extracting hand and body movement with MediaPipe and visual features with ViT, then turns the signs into an English sentence that is read aloud.</p></div><div class="ps ps-role"><h4>My role</h4><p>A TÜBİTAK 2209-A supported project. I developed the platform end to end and reached about 94% sign recognition accuracy.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>Vision Transformer (ViT)</li><li>MediaPipe</li><li>OpenCV</li><li>FastAPI</li><li>JavaScript</li><li>Web Speech API</li><li>HTML</li><li>CSS</li></ul>
         <div class="actions"><a class="btn-demo" href="https://laraomar25.github.io/CoSigning/" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Live demo<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (opens in a new tab)</span></a><a class="btn-ghost" href="https://github.com/Laraomar25/CoSigning" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>Source code<span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
     </article>
-    <article class="proj reveal flip" id="employment-gap" style="--a1:#E9B872;--a2:#2BB3A8" aria-labelledby="employment-gap-t">
+    <article class="proj reveal" id="employment-gap" style="--a1:#E9B872;--a2:#2BB3A8" aria-labelledby="employment-gap-t">
       <div class="proj-media">
         <button class="card3d" type="button" aria-pressed="false"
                 data-front="Tap to see the real project" data-back="Tap to go back to the drawing">
@@ -134,7 +134,7 @@
         <p class="kicker"><span class="dot"></span>Featured<span class="live">Live</span></p>
         <h3 id="employment-gap-t">Employment Gap Study for Tech Graduates</h3>
         <p class="lead">A study of the employment gap among tech graduates, with its digital outputs.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Many tech graduates in Türkiye struggle to land their first job, and the gap between what they learned and what job ads actually ask for is unclear to them.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>We analysed 216 tech job ads from Kariyer.net, Indeed and Eleman.net plus 405 graduate posts, then I built the Telegram bot “Graduate Compass AI”. It presents the findings with practical tools: a skills check, a job-ad explorer, a 30-day roadmap, a CV checker, a field comparison and “Ask the observatory” with sourced answers.</p></div></div>
+        <details class="more"><summary>View details<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Many tech graduates in Türkiye struggle to land their first job, and the gap between what they learned and what job ads actually ask for is unclear to them.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>We analysed 216 tech job ads from Kariyer.net, Indeed and Eleman.net plus 405 graduate posts, then I built the Telegram bot “Graduate Compass AI”. It presents the findings with practical tools: a skills check, a job-ad explorer, a 30-day roadmap, a CV checker, a field comparison and “Ask the observatory” with sourced answers.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="Technologies"><li>Python</li><li>python-telegram-bot</li><li>pandas</li><li>SQLite</li><li>Claude API</li><li>BM25</li></ul>
         <div class="actions"><a class="btn-demo" href="https://t.me/hasbyaallah_bot" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Try the bot on Telegram<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
@@ -162,7 +162,7 @@
         <p class="kicker"><span class="dot"></span>Featured<span class="live">Live</span></p>
         <h3 id="library-management-system-t">Library Management System</h3>
         <p class="lead">A desktop app for running a library: sign-in and registration, adding, editing and deleting books with cover images, issuing and returning books, and a chart of books by genre.</p>
-        <div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Many libraries track their books and loans by hand or in scattered spreadsheets, so it is hard to know which copies are available, who borrowed what, and when it is due back.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>I built a C# desktop app with a SQLite database that brings it all together: sign-in accounts, book management with covers, issuing and returning books with stock updated automatically, and a chart of books by genre. I then rebuilt it as an interactive web version you can try right in the browser.</p></div></div>
+        <details class="more"><summary>View details<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap"><div class="ps ps-problem"><h4>The problem</h4><p>Many libraries track their books and loans by hand or in scattered spreadsheets, so it is hard to know which copies are available, who borrowed what, and when it is due back.</p></div><div class="ps ps-solution"><h4>The solution</h4><p>I built a C# desktop app with a SQLite database that brings it all together: sign-in accounts, book management with covers, issuing and returning books with stock updated automatically, and a chart of books by genre. I then rebuilt it as an interactive web version you can try right in the browser.</p></div></div></details>
         <ul class="chips" dir="ltr" aria-label="Technologies"><li>C#</li><li>Windows Forms</li><li>.NET Framework</li><li>SQLite</li><li>JavaScript (web version)</li></ul>
         <div class="actions"><a class="btn-demo" href="https://laraomar25.github.io/library-management-system/" target="_blank" rel="noopener"><span class="pulse" aria-hidden="true"></span>Live demo<svg class="ico arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="sr-only"> (opens in a new tab)</span></a><a class="btn-ghost" href="https://github.com/Laraomar25/library-management-system" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>Source code<span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
@@ -198,13 +198,67 @@
         <h2 id="about-t">About me</h2>
       </div>
       <div class="about-grid">
-        <p class="about-text reveal">Computer Engineering graduate from Karabük University, interested in software development and building practical solutions.</p>
-        <ol class="timeline" aria-label="Path">
-      <li class="reveal">
+        <div class="about-main">
+          <p class="about-text reveal">Computer Engineering graduate from Karabük University with hands-on experience in web development, .NET applications, REST APIs, databases and AI-based systems. Fluent in Arabic, Turkish and English, I enjoy solving problems and building effective digital solutions.</p>
+          <div class="langs-box reveal"><h3>Languages</h3><ul class="lg">
+          <li><span class="lg-name">Arabic</span><span class="lg-level">Native</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:100%"></i></span></li>
+          <li><span class="lg-name">Turkish</span><span class="lg-level">Fluent</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:90%"></i></span></li>
+          <li><span class="lg-name">English</span><span class="lg-level">Fluent</span>
+            <span class="lg-bar" aria-hidden="true"><i style="width:90%"></i></span></li>
+          </ul></div>
+          
+        <div class="cv-card reveal" id="cv">
+          <a class="cv-paper" href="cv/Lara-Alothmani-CV.pdf" target="_blank" rel="noopener">
+            <img src="images/cv-preview.jpg" alt="Preview of Lara Alothmani&#x27;s CV" loading="lazy" width="910" height="1287">
+            <span class="cv-badge" aria-hidden="true">PDF</span><span class="sr-only"> (opens in a new tab)</span>
+          </a>
+          <div class="cv-info">
+            <p class="eyebrow">Résumé</p>
+            <h3>My full CV</h3>
+            <p>One page: projects, experience, education and skills.</p>
+            <div class="cv-btns">
+              <a class="btn-demo" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download PDF</a>
+              <a class="btn-ghost" href="cv/Lara-Alothmani-CV.pdf" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>View<span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+        </div>
+        </div>
+        <ol class="timeline" aria-label="Experience &amp; education">
+      <li class="reveal tl-exp">
         <span class="tl-dot" aria-hidden="true"></span>
-        <p class="tl-tag">Education</p>
+        <p class="tl-tag">Experience<span class="tl-when" dir="ltr">Jun – Jul 2026</span></p>
+        <h3>Software Development Intern</h3>
+        <p class="tl-org">Karabük University</p>
+        <p class="tl-desc">Built a layered C#/.NET application using Entity Framework, SQL Server, REST API and JWT.</p>
+      </li>
+      <li class="reveal tl-exp">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">Experience<span class="tl-when" dir="ltr">Jun – Jul 2025</span></p>
+        <h3>Web Development Intern</h3>
+        <p class="tl-org">Mgs · Istanbul</p>
+        <p class="tl-desc">Supported front-end and back-end web development, application testing and technical issue resolution.</p>
+      </li>
+      <li class="reveal tl-edu">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">Education<span class="tl-when" dir="ltr">2021 – 2026</span></p>
         <h3>B.Sc. in Computer Engineering</h3>
         <p class="tl-org">Karabük University</p>
+        
+      </li>
+      <li class="reveal tl-cert">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">Certificate</p>
+        <h3>Database Design &amp; Database Programming with SQL</h3>
+        <p class="tl-org">Oracle Academy</p>
+        
+      </li>
+      <li class="reveal tl-cert">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <p class="tl-tag">Certificate</p>
+        <h3>Optimization Onramp</h3>
+        <p class="tl-org">MathWorks</p>
         
       </li>
         </ol>
@@ -219,15 +273,27 @@
       <div class="skills">
       <div class="skill reveal">
         <h3>Programming languages</h3>
-        <ul dir="ltr"><li>Java</li><li>Kotlin</li><li>Python</li><li>C#</li></ul>
+        <ul dir="ltr"><li>Python</li><li>C#</li><li>Java</li><li>Kotlin</li></ul>
       </div>
       <div class="skill reveal">
         <h3>Web development</h3>
-        <ul dir="ltr"><li>HTML</li><li>CSS</li></ul>
+        <ul dir="ltr"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>Back-end</h3>
+        <ul dir="ltr"><li>.NET</li><li>Web API</li><li>REST API</li><li>JWT</li><li>Entity Framework</li></ul>
       </div>
       <div class="skill reveal">
         <h3>Databases</h3>
-        <ul dir="ltr"><li>SQL</li></ul>
+        <ul dir="ltr"><li>SQL</li><li>MySQL</li><li>SQL Server</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>AI &amp; computer vision</h3>
+        <ul dir="ltr"><li>OpenCV</li><li>MediaPipe</li><li>Vision Transformer</li></ul>
+      </div>
+      <div class="skill reveal">
+        <h3>Tools</h3>
+        <ul dir="ltr"><li>Postman</li><li>Blender</li></ul>
       </div>
       </div>
     </section>
@@ -242,7 +308,7 @@
         <div class="mail">
           <a class="mail-link" href="mailto:laraomar256@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">laraomar256@gmail.com</span></a>
           <button class="copy" type="button" data-copy="laraomar256@gmail.com" data-done="Copied"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Copy</span></button>
-        </div><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>My GitHub<span class="sr-only"> (opens in a new tab)</span></a>
+        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download CV</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>My GitHub<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
     </section>
