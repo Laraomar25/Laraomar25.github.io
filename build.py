@@ -51,9 +51,9 @@ def art_for(p):
 
 # Each featured project gets its own colour pair
 ACCENTS = {
-    "cosigning": ("#8B7BFF", "#2EC5FF"),
-    "employment-gap": ("#E9B872", "#2BB3A8"),
-    "library-management-system": ("#FFB38A", "#FF7E6B"),
+    "cosigning": ("#245DDA", "#78BFF0"),
+    "employment-gap": ("#8B79C6", "#78BFF0"),
+    "library-management-system": ("#3D7BE8", "#9FD0F4"),
 }
 MORE_ICONS = {
     "bank-management-system": '<path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
@@ -161,7 +161,7 @@ def build(L):
                 f'<span>{u("zoom")}</span></button>')
 
     def project_card(p, i):
-        a1, a2 = ACCENTS.get(p["id"], ("#8B7BFF", "#2EC5FF"))
+        a1, a2 = ACCENTS.get(p["id"], ("#245DDA", "#78BFF0"))
         img = (p.get("images") or [None])[0]
         media = (
             f'<img src="{e(img["src"])}" alt="{e(t(img["alt"], lang))}" loading="lazy" width="1440" height="1080">'
@@ -181,7 +181,7 @@ def build(L):
                      f'<span class="pulse" aria-hidden="true"></span>{label}{ARROW}{new_tab}</a>')
         if p.get("code"):
             btns += f'<a class="btn-ghost" href="{e(p["code"])}" target="_blank" rel="noopener">{CODE_ICO}{u("code")}{new_tab}</a>'
-        flip = ""
+        flip = " flip" if i % 2 else ""
         return f'''
     <article class="proj reveal{flip}" id="{e(p["id"])}" style="--a1:{a1};--a2:{a2}" aria-labelledby="{e(p["id"])}-t">
       <div class="proj-media">{card3d(p, host, media) + zoom_btn(img, p) if art_for(p) else f"""
@@ -194,7 +194,7 @@ def build(L):
         <p class="kicker"><span class="dot"></span>{u("featured")}{f'<span class="live">{u("live")}</span>' if p.get("demo") else ""}</p>
         <h3 id="{e(p["id"])}-t">{e(t(p["title"], lang))}</h3>
         <p class="lead">{e(t(p.get("summary"), lang))}</p>
-        {f'''<details class="more"><summary>{u("details")}<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="ps-wrap">{blocks}</div></details>''' if blocks else ""}
+        <div class="ps-wrap">{blocks}</div>
         {f'<ul class="chips" dir="ltr" aria-label="{u("tech")}">{chips}</ul>' if chips else ""}
         <div class="actions">{btns}</div>
       </div>
@@ -273,7 +273,7 @@ def build(L):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(t(site["title"], lang))}</title>
   <meta name="description" content="{e(t(site["description"], lang))}">
-  <meta name="theme-color" content="#1A2547">
+  <meta name="theme-color" content="#142440">
   <link rel="canonical" href="{url}">
 {alts}
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
