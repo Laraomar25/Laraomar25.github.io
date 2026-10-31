@@ -1,0 +1,513 @@
+{
+ "site": {
+  "title": {
+   "ar": "لارا العثماني — مهندسة حاسوب",
+   "en": "Lara Alothmani — Computer Engineer",
+   "tr": "Lara Alothmani — Bilgisayar Mühendisi"
+  },
+  "description": {
+   "ar": "لارا العثماني، مهندسة حاسوب في إسطنبول، خريجة جامعة كارابوك، مهتمة بتطوير البرمجيات وبناء حلول عملية.",
+   "en": "Lara Alothmani, a Computer Engineer in Istanbul and Karabük University graduate, focused on software development and practical solutions.",
+   "tr": "Lara Alothmani, İstanbul'da yaşayan, Karabük Üniversitesi mezunu, yazılım geliştirme ve pratik çözümlere odaklanan bir Bilgisayar Mühendisi."
+  }
+ },
+ "profile": {
+  "name": {
+   "ar": "لارا العثماني",
+   "en": "Lara Alothmani",
+   "tr": "Lara Alothmani"
+  },
+  "initials": "LA",
+  "title": {
+   "ar": "مهندسة حاسوب",
+   "en": "Computer Engineer",
+   "tr": "Bilgisayar Mühendisi"
+  },
+  "location": {
+   "ar": "إسطنبول، تركيا",
+   "en": "Istanbul, Türkiye",
+   "tr": "İstanbul, Türkiye"
+  },
+  "tagline": {
+   "ar": "أحوّل الأفكار إلى حلول برمجية عملية.",
+   "en": "I turn ideas into practical software solutions.",
+   "tr": "Fikirleri pratik yazılım çözümlerine dönüştürüyorum."
+  },
+  "photo": null
+ },
+ "about": {
+  "ar": "خريجة هندسة حاسوب من جامعة كارابوك، مهتمة بتطوير البرمجيات وبناء حلول عملية.",
+  "en": "Computer Engineering graduate from Karabük University, interested in software development and building practical solutions.",
+  "tr": "Karabük Üniversitesi Bilgisayar Mühendisliği mezunuyum; yazılım geliştirme ve pratik çözümler üretmekle ilgileniyorum."
+ },
+ "projects": [
+  {
+   "featured": true,
+   "title": {
+    "ar": "CoSigning",
+    "en": "CoSigning",
+    "tr": "CoSigning"
+   },
+   "summary": {
+    "ar": "منصة ترجمة باتجاهين بين لغة الإشارة الأمريكية (ASL) والكلام.",
+    "en": "A two-way translation platform between American Sign Language (ASL) and speech.",
+    "tr": "Amerikan İşaret Dili (ASL) ile konuşma arasında çift yönlü bir çeviri platformu."
+   },
+   "problem": {
+    "ar": "يواجه الصم وضعاف السمع صعوبة في التواصل اليومي مع الأشخاص الذين لا يعرفون لغة الإشارة.",
+    "en": "Deaf and hard-of-hearing people struggle to communicate day to day with people who don't know sign language.",
+    "tr": "İşitme engelli bireyler, işaret dili bilmeyen kişilerle günlük iletişimde zorluk yaşıyor."
+   },
+   "solution": {
+    "ar": "من الكلام إلى الإشارة: يلتقط الموقع الجملة المنطوقة ويحوّلها إلى نص، ثم يعرض فيديو لكل إشارة بالترتيب. ومن الإشارة إلى الكلام: يحلّل نموذج تعلّم عميق (Transformer) فيديو الكاميرا أو فيديو مرفوعًا، فيستخرج حركة اليدين والجسم باستخدام MediaPipe وملامح الصورة باستخدام ViT، ثم يحوّل الإشارات إلى جملة إنجليزية تُقرأ بصوت مسموع.",
+    "en": "Speech to sign: the site captures a spoken sentence, turns it into text, and plays a video for each sign in order. Sign to speech: a deep-learning Transformer model analyses webcam or uploaded video, extracting hand and body movement with MediaPipe and visual features with ViT, then turns the signs into an English sentence that is read aloud.",
+    "tr": "Konuşmadan işarete: site söylenen cümleyi yakalayıp metne çevirir ve her işaretin videosunu sırayla oynatır. İşaretten konuşmaya: derin öğrenmeye dayalı bir Transformer modeli kamera ya da yüklenen videoyu analiz eder; MediaPipe ile el ve vücut hareketlerini, ViT ile görsel özellikleri çıkarır ve işaretleri sesli okunan İngilizce bir cümleye dönüştürür."
+   },
+   "role": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [
+    "Python",
+    "PyTorch",
+    "Vision Transformer (ViT)",
+    "MediaPipe",
+    "OpenCV",
+    "FastAPI",
+    "JavaScript",
+    "Web Speech API",
+    "HTML",
+    "CSS"
+   ],
+   "images": [
+    {
+     "src": "images/cosigning.jpg",
+     "alt": {
+      "ar": "واجهة CoSigning: إدخال الكلام، وشخصية رقمية تؤدي الإشارات، وتسلسل الإشارات",
+      "en": "The CoSigning interface: speech input, an avatar that performs the signs, and the sign sequence",
+      "tr": "CoSigning arayüzü: konuşma girişi, işaretleri yapan avatar ve işaret dizisi"
+     }
+    }
+   ],
+   "demo": "https://laraomar25.github.io/CoSigning/",
+   "code": "https://github.com/Laraomar25/CoSigning",
+   "id": "cosigning",
+   "art": "cosigning"
+  },
+  {
+   "featured": true,
+   "title": {
+    "ar": "دراسة فجوة التوظيف لدى خريجي التخصصات التقنية",
+    "en": "Employment Gap Study for Tech Graduates",
+    "tr": "Teknoloji Mezunlarında İstihdam Açığı Araştırması"
+   },
+   "summary": {
+    "ar": "دراسة لفجوة التوظيف لدى خريجي التخصصات التقنية ومخرجاتها الرقمية.",
+    "en": "A study of the employment gap among tech graduates, with its digital outputs.",
+    "tr": "Teknik bölüm mezunlarındaki istihdam açığına ve dijital çıktılarına yönelik bir araştırma."
+   },
+   "problem": {
+    "ar": "يجد كثير من خريجي التخصصات التقنية في تركيا صعوبة في الحصول على أول وظيفة، ولا تتضح لهم الفجوة بين ما تعلّموه وما تطلبه الإعلانات فعلًا.",
+    "en": "Many tech graduates in Türkiye struggle to land their first job, and the gap between what they learned and what job ads actually ask for is unclear to them.",
+    "tr": "Türkiye'deki birçok teknoloji mezunu ilk işini bulmakta zorlanıyor; öğrendikleri ile iş ilanlarının gerçekte istedikleri arasındaki fark onlar için belirsiz."
+   },
+   "solution": {
+    "ar": "حلّلنا 216 إعلان وظيفة تقنية من Kariyer.net وIndeed وEleman.net و405 منشورات للخريجين، ثم بنيت بوت تليجرام «Graduate Compass AI» يعرض النتائج ويقدّم أدوات عملية: تحليل المهارات، ومستكشف الإعلانات، وخارطة طريق لثلاثين يومًا، وفاحص السيرة الذاتية، ومقارنة التخصصات، و«اسأل المرصد» بإجابات موثقة المصادر.",
+    "en": "We analysed 216 tech job ads from Kariyer.net, Indeed and Eleman.net plus 405 graduate posts, then I built the Telegram bot “Graduate Compass AI”. It presents the findings with practical tools: a skills check, a job-ad explorer, a 30-day roadmap, a CV checker, a field comparison and “Ask the observatory” with sourced answers.",
+    "tr": "Kariyer.net, Indeed ve Eleman.net'ten 216 teknoloji iş ilanını ve mezunların 405 paylaşımını analiz ettik; ardından bulguları sunan “Graduate Compass AI” Telegram botunu geliştirdim. Bot pratik araçlar sunuyor: beceri analizi, ilan gezgini, 30 günlük yol haritası, CV kontrolü, alan karşılaştırması ve kaynaklı yanıtlar veren “Gözlemevine sor”."
+   },
+   "role": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [
+    "Python",
+    "python-telegram-bot",
+    "pandas",
+    "SQLite",
+    "Claude API",
+    "BM25"
+   ],
+   "images": [
+    {
+     "src": "images/graduate-compass.jpg",
+     "alt": {
+      "ar": "بطاقة من بوت Graduate Compass AI تقارن المهارات المطلوبة في إعلانات البرمجة والبيانات",
+      "en": "A card from the Graduate Compass AI bot comparing the skills asked for in programming and data job ads",
+      "tr": "Graduate Compass AI botundan, programlama ve veri ilanlarında istenen becerileri karşılaştıran bir kart"
+     }
+    }
+   ],
+   "demo": "https://t.me/hasbyaallah_bot",
+   "code": null,
+   "id": "employment-gap",
+   "art": "gap"
+  },
+  {
+   "title": {
+    "ar": "نظام إدارة بنك",
+    "en": "Bank Management System",
+    "tr": "Banka Yönetim Sistemi"
+   },
+   "summary": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [],
+   "images": [],
+   "id": "bank-management-system"
+  },
+  {
+   "title": {
+    "ar": "نظام إدارة مكتبة",
+    "en": "Library Management System",
+    "tr": "Kütüphane Yönetim Sistemi"
+   },
+   "summary": {
+    "ar": "تطبيق سطح مكتب لإدارة مكتبة: تسجيل الدخول وإنشاء الحسابات، وإضافة الكتب وتعديلها وحذفها مع صور أغلفتها، وإعارة الكتب وإرجاعها، ورسم بياني يوضّح توزيع الكتب حسب النوع.",
+    "en": "A desktop app for running a library: sign-in and registration, adding, editing and deleting books with cover images, issuing and returning books, and a chart of books by genre.",
+    "tr": "Bir kütüphaneyi yönetmek için masaüstü uygulaması: giriş ve kayıt, kapak görselleriyle kitap ekleme, düzenleme ve silme, kitap ödünç verme ve iade alma, türlere göre kitap dağılımını gösteren grafik."
+   },
+   "tech": [
+    "C#",
+    "Windows Forms",
+    ".NET Framework",
+    "SQLite",
+    "JavaScript (web version)"
+   ],
+   "images": [
+    {
+     "src": "images/library.jpg",
+     "alt": {
+      "ar": "الشاشة الرئيسية لتطبيق Ravān Library مع إحصاءات المكتبة وأغلفة الكتب",
+      "en": "The Ravān Library home screen with library stats and book covers",
+      "tr": "Kütüphane istatistikleri ve kitap kapaklarıyla Ravān Library ana ekranı"
+     }
+    }
+   ],
+   "id": "library-management-system",
+   "code": "https://github.com/Laraomar25/library-management-system",
+   "demo": "https://laraomar25.github.io/library-management-system/",
+   "featured": true,
+   "problem": {
+    "ar": "تتابع مكتبات كثيرة كتبها وإعاراتها يدويًا أو في جداول متفرقة، فيصعب معرفة النسخ المتوفرة ومن استعار أي كتاب ومتى يجب إرجاعه.",
+    "en": "Many libraries track their books and loans by hand or in scattered spreadsheets, so it is hard to know which copies are available, who borrowed what, and when it is due back.",
+    "tr": "Birçok kütüphane kitaplarını ve ödünçlerini elle ya da dağınık tablolarla takip ediyor; hangi kopyaların mevcut olduğunu, kimin neyi ödünç aldığını ve ne zaman iade edileceğini bilmek zorlaşıyor."
+   },
+   "solution": {
+    "ar": "بنيت تطبيق سطح مكتب بلغة C# وقاعدة بيانات SQLite يجمع كل ذلك في مكان واحد: حسابات للدخول، وإدارة الكتب مع أغلفتها، وإعارة الكتب وإرجاعها مع تحديث عدد النسخ تلقائيًا، ورسم بياني لتوزيع الكتب حسب النوع. ثم أعدت بناءه نسخة ويب تفاعلية يمكن تجربتها من المتصفح مباشرة.",
+    "en": "I built a C# desktop app with a SQLite database that brings it all together: sign-in accounts, book management with covers, issuing and returning books with stock updated automatically, and a chart of books by genre. I then rebuilt it as an interactive web version you can try right in the browser.",
+    "tr": "Hepsini tek yerde toplayan, C# ve SQLite veritabanıyla bir masaüstü uygulaması geliştirdim: giriş hesapları, kapaklarıyla kitap yönetimi, stok sayısını otomatik güncelleyen ödünç verme ve iade, türlere göre kitap grafiği. Ardından uygulamayı doğrudan tarayıcıda denenebilen etkileşimli bir web sürümü olarak yeniden oluşturdum."
+   }
+  },
+  {
+   "title": {
+    "ar": "متجر كتب إلكتروني",
+    "en": "Online Bookstore",
+    "tr": "Çevrimiçi Kitapçı"
+   },
+   "summary": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [],
+   "images": [],
+   "id": "online-bookstore"
+  },
+  {
+   "title": {
+    "ar": "رصد الحرائق باستخدام GIS",
+    "en": "Wildfire Monitoring with GIS",
+    "tr": "CBS ile Orman Yangını İzleme"
+   },
+   "summary": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [],
+   "images": [],
+   "id": "wildfire-monitoring-with-gis"
+  }
+ ],
+ "skills": [
+  {
+   "group": {
+    "ar": "لغات البرمجة",
+    "en": "Programming languages",
+    "tr": "Programlama dilleri"
+   },
+   "items": [
+    "Java",
+    "Kotlin",
+    "Python",
+    "C#"
+   ]
+  },
+  {
+   "group": {
+    "ar": "تطوير الويب",
+    "en": "Web development",
+    "tr": "Web geliştirme"
+   },
+   "items": [
+    "HTML",
+    "CSS"
+   ]
+  },
+  {
+   "group": {
+    "ar": "قواعد البيانات",
+    "en": "Databases",
+    "tr": "Veritabanları"
+   },
+   "items": [
+    "SQL"
+   ]
+  }
+ ],
+ "education": [
+  {
+   "title": {
+    "ar": "بكالوريوس هندسة الحاسوب",
+    "en": "B.Sc. in Computer Engineering",
+    "tr": "Bilgisayar Mühendisliği Lisans"
+   },
+   "org": {
+    "ar": "جامعة كارابوك",
+    "en": "Karabük University",
+    "tr": "Karabük Üniversitesi"
+   },
+   "period": null,
+   "description": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   }
+  }
+ ],
+ "training": [],
+ "volunteering": [],
+ "contact": {
+  "email": "laraomar256@gmail.com",
+  "linkedin": null,
+  "github": "https://github.com/Laraomar25",
+  "cv": null
+ },
+ "ui": {
+  "skip": {
+   "ar": "تخطَّ إلى المحتوى",
+   "en": "Skip to content",
+   "tr": "İçeriğe geç"
+  },
+  "menu": {
+   "ar": "القائمة",
+   "en": "Menu",
+   "tr": "Menü"
+  },
+  "nav_about": {
+   "ar": "نبذة",
+   "en": "About",
+   "tr": "Hakkımda"
+  },
+  "nav_projects": {
+   "ar": "المشاريع",
+   "en": "Projects",
+   "tr": "Projeler"
+  },
+  "nav_skills": {
+   "ar": "المهارات",
+   "en": "Skills",
+   "tr": "Yetenekler"
+  },
+  "nav_education": {
+   "ar": "التعليم",
+   "en": "Education",
+   "tr": "Eğitim"
+  },
+  "nav_contact": {
+   "ar": "تواصل",
+   "en": "Contact",
+   "tr": "İletişim"
+  },
+  "cta_projects": {
+   "ar": "استكشف أعمالي",
+   "en": "Explore my work",
+   "tr": "Çalışmalarımı keşfet"
+  },
+  "cta_contact": {
+   "ar": "تواصل معي",
+   "en": "Get in touch",
+   "tr": "İletişime geç"
+  },
+  "about_title": {
+   "ar": "نبذة عني",
+   "en": "About me",
+   "tr": "Hakkımda"
+  },
+  "projects_title": {
+   "ar": "المشاريع",
+   "en": "Projects",
+   "tr": "Projeler"
+  },
+  "featured": {
+   "ar": "مشروع بارز",
+   "en": "Featured",
+   "tr": "Öne çıkan"
+  },
+  "details": {
+   "ar": "عرض التفاصيل",
+   "en": "View details",
+   "tr": "Detayları gör"
+  },
+  "close": {
+   "ar": "إغلاق",
+   "en": "Close",
+   "tr": "Kapat"
+  },
+  "problem": {
+   "ar": "المشكلة",
+   "en": "The problem",
+   "tr": "Problem"
+  },
+  "solution": {
+   "ar": "الحل",
+   "en": "The solution",
+   "tr": "Çözüm"
+  },
+  "role": {
+   "ar": "دوري",
+   "en": "My role",
+   "tr": "Rolüm"
+  },
+  "tech": {
+   "ar": "التقنيات",
+   "en": "Technologies",
+   "tr": "Teknolojiler"
+  },
+  "demo": {
+   "ar": "تجربة المشروع",
+   "en": "Live demo",
+   "tr": "Canlı demo"
+  },
+  "code": {
+   "ar": "الكود المصدري",
+   "en": "Source code",
+   "tr": "Kaynak kodu"
+  },
+  "skills_title": {
+   "ar": "المهارات",
+   "en": "Skills",
+   "tr": "Yetenekler"
+  },
+  "education_title": {
+   "ar": "التعليم والتدريب والتطوع",
+   "en": "Education, training & volunteering",
+   "tr": "Eğitim, staj ve gönüllülük"
+  },
+  "education": {
+   "ar": "التعليم",
+   "en": "Education",
+   "tr": "Eğitim"
+  },
+  "training": {
+   "ar": "التدريب",
+   "en": "Training",
+   "tr": "Eğitim ve staj"
+  },
+  "volunteering": {
+   "ar": "التطوع",
+   "en": "Volunteering",
+   "tr": "Gönüllülük"
+  },
+  "contact_title": {
+   "ar": "لنحوّل فكرة إلى مشروع",
+   "en": "Let's turn an idea into a project",
+   "tr": "Bir fikri projeye dönüştürelim"
+  },
+  "contact_text": {
+   "ar": "يسعدني التواصل بخصوص فرص العمل والتعاون.",
+   "en": "I'd be glad to hear about job opportunities and collaborations.",
+   "tr": "İş fırsatları ve iş birlikleri hakkında sizden haber almaktan memnuniyet duyarım."
+  },
+  "email": {
+   "ar": "البريد الإلكتروني",
+   "en": "Email",
+   "tr": "E-posta"
+  },
+  "cv": {
+   "ar": "تحميل السيرة الذاتية",
+   "en": "Download CV",
+   "tr": "Özgeçmişi indir"
+  },
+  "new_tab": {
+   "ar": "(يفتح في نافذة جديدة)",
+   "en": "(opens in a new tab)",
+   "tr": "(yeni sekmede açılır)"
+  },
+  "rights": {
+   "ar": "جميع الحقوق محفوظة.",
+   "en": "All rights reserved.",
+   "tr": "Tüm hakları saklıdır."
+  },
+  "missing": {
+   "ar": "بانتظار المحتوى — يظهر هذا الإطار في المعاينة المحلية فقط",
+   "en": "Awaiting content — this box only shows in the local preview",
+   "tr": "İçerik bekleniyor — bu kutu yalnızca yerel önizlemede görünür"
+  },
+  "language": {
+   "ar": "اللغة",
+   "en": "Language",
+   "tr": "Dil"
+  },
+  "work_kicker": {
+   "ar": "من الفكرة إلى الحل",
+   "en": "From idea to solution",
+   "tr": "Fikirden çözüme"
+  },
+  "more_projects": {
+   "ar": "مشاريع أخرى",
+   "en": "More projects",
+   "tr": "Diğer projeler"
+  },
+  "about_kicker": {
+   "ar": "من أنا",
+   "en": "Who I am",
+   "tr": "Ben kimim"
+  },
+  "timeline_title": {
+   "ar": "المسار",
+   "en": "Path",
+   "tr": "Yolculuk"
+  },
+  "skills_kicker": {
+   "ar": "أدواتي",
+   "en": "My toolkit",
+   "tr": "Araçlarım"
+  },
+  "contact_kicker": {
+   "ar": "تواصل",
+   "en": "Contact",
+   "tr": "İletişim"
+  },
+  "contact_missing": {
+   "ar": "بانتظار وسائل التواصل (البريد، LinkedIn، GitHub). يظهر هذا القسم بعد إضافتها.",
+   "en": "Awaiting contact details (email, LinkedIn, GitHub). This section appears once they are added.",
+   "tr": "İletişim bilgileri bekleniyor (e-posta, LinkedIn, GitHub). Eklendiğinde bu bölüm görünür."
+  },
+  "training_missing": {
+   "ar": "بانتظار بيانات التدريب والتطوع",
+   "en": "Awaiting training and volunteering details",
+   "tr": "Staj ve gönüllülük bilgileri bekleniyor"
+  },
+  "back_to_top": {
+   "ar": "العودة للأعلى",
+   "en": "Back to top",
+   "tr": "Başa dön"
+  }
+ }
+}
