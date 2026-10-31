@@ -28,7 +28,15 @@ EXTRA = {
     "projects_count": {"ar": "مشاريع", "en": "projects", "tr": "proje"},
     "langs_count": {"ar": "لغات للموقع", "en": "site languages", "tr": "site dili"},
     "live_count": {"ar": "مشاريع يمكنك تجربتها", "en": "projects you can try", "tr": "denenebilir proje"},
+    "flip_hint": {"ar": "اضغط لرؤية المشروع الحقيقي", "en": "Tap to see the real project", "tr": "Gerçek projeyi görmek için dokun"},
+    "flip_back": {"ar": "اضغط للعودة إلى الرسمة", "en": "Tap to go back to the drawing", "tr": "Çizime dönmek için dokun"},
 }
+
+
+def art_for(p):
+    """The project's illustration from art/<id>.svg, or "" if there is none."""
+    f = HERE / "art" / f"{p['id']}.svg"
+    return f.read_text(encoding="utf-8").strip() if f.exists() else ""
 
 # Each featured project gets its own colour pair
 ACCENTS = {
@@ -112,6 +120,26 @@ def build(L):
     code = "\n".join(f'<span class="ln">{i}</span>{l}' for i, l in enumerate(code_lines, 1))
 
     # ---------- featured projects ----------
+    def card3d(p, host, media):
+        # Front: the illustration. Back (after a click): the real screenshot.
+        return f'''
+        <button class="card3d" type="button" aria-pressed="false"
+                data-front="{u("flip_hint")}" data-back="{u("flip_back")}">
+          <span class="card3d-inner">
+            <span class="face front">
+              <span class="art">{art_for(p)}</span>
+              <span class="hint"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg><span class="hint-text">{u("flip_hint")}</span></span>
+            </span>
+            <span class="face back">
+              <span class="browser">
+                <span class="browser-bar"><i></i><i></i><i></i><span dir="ltr">{e(host)}</span></span>
+                <span class="browser-shot">{media}</span>
+              </span>
+              <span class="hint"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg><span class="hint-text">{u("flip_back")}</span></span>
+            </span>
+          </span>
+        </button>'''
+
     def project_card(p, i):
         a1, a2 = ACCENTS.get(p["id"], ("#8B7BFF", "#2EC5FF"))
         img = (p.get("images") or [None])[0]
@@ -136,11 +164,11 @@ def build(L):
         flip = " flip" if i % 2 else ""
         return f'''
     <article class="proj reveal{flip}" id="{e(p["id"])}" style="--a1:{a1};--a2:{a2}" aria-labelledby="{e(p["id"])}-t">
-      <div class="proj-media">
+      <div class="proj-media">{card3d(p, host, media) if art_for(p) else f"""
         <div class="browser">
           <div class="browser-bar"><i></i><i></i><i></i><span dir="ltr">{e(host)}</span></div>
           <div class="browser-shot">{media}</div>
-        </div>
+        </div>"""}
       </div>
       <div class="proj-body">
         <p class="kicker"><span class="dot"></span>{u("featured")}{f'<span class="live">{u("live")}</span>' if p.get("demo") else ""}</p>

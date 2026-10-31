@@ -15,6 +15,16 @@
     items.forEach(el => io.observe(el));
   }
 
+  // Flip cards: drawing <-> real screenshot
+  document.querySelectorAll(".card3d").forEach(card => {
+    const set = on => {
+      card.classList.toggle("is-flipped", on);
+      card.setAttribute("aria-pressed", on ? "true" : "false");
+    };
+    card.addEventListener("click", () => set(!card.classList.contains("is-flipped")));
+    if (location.search.includes("flipped")) set(true);
+  });
+
   // Copy email
   document.querySelectorAll("[data-copy]").forEach(btn => {
     const label = btn.querySelector("span");
