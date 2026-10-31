@@ -273,7 +273,7 @@ def build(L):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(t(site["title"], lang))}</title>
   <meta name="description" content="{e(t(site["description"], lang))}">
-  <meta name="theme-color" content="#0B1020">
+  <meta name="theme-color" content="#1A2547">
   <link rel="canonical" href="{url}">
 {alts}
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
