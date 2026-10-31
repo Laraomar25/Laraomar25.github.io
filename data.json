@@ -207,9 +207,9 @@
    "id": "coach-training-platform",
    "featured": true,
    "title": {
-    "ar": "منصة تدريب «المدرّبة لارا»",
-    "en": "“Coach Lara” Training Platform",
-    "tr": "“Eğitmen Lara” Eğitim Platformu"
+    "ar": "منصة تدريب",
+    "en": "Training Platform",
+    "tr": "Eğitim Platformu"
    },
    "summary": {
     "ar": "منصة دورات تدريبية تظهر على شاشة لابتوب ثلاثي الأبعاد: دورات ودروس، وتتبّع لتقدّم المتدربات، وقاعة للتدريب المباشر.",
@@ -242,9 +242,9 @@
     {
      "src": "images/coach.jpg",
      "alt": {
-      "ar": "منصة «المدرّبة لارا» على شاشة لابتوب ثلاثي الأبعاد: قائمة الدورات ودروس دورة «الباحث مع Claude» مع تقدّم المتدربة",
-      "en": "The “Coach Lara” platform on a 3D laptop screen: the course list and the lessons of “Researcher with Claude” with the trainee's progress",
-      "tr": "3B dizüstü bilgisayar ekranında “Eğitmen Lara” platformu: kurs listesi ve katılımcının ilerlemesiyle “Claude ile Araştırmacı” kursunun dersleri"
+      "ar": "منصة التدريب على شاشة لابتوب ثلاثي الأبعاد: قائمة الدورات ودروس دورة «الباحث مع Claude» مع تقدّم المتدربة",
+      "en": "The training platform on a 3D laptop screen: the course list and the lessons of “Researcher with Claude” with the trainee's progress",
+      "tr": "3B dizüstü bilgisayar ekranında eğitim platformu: kurs listesi ve katılımcının ilerlemesiyle “Claude ile Araştırmacı” kursunun dersleri"
      }
     }
    ],
