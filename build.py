@@ -280,7 +280,7 @@ def build(L):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(t(site["title"], lang))}</title>
   <meta name="description" content="{e(t(site["description"], lang))}">
-  <meta name="theme-color" content="#1C3768">
+  <meta name="theme-color" content="#142440">
   <link rel="canonical" href="{url}">
 {alts}
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -341,20 +341,22 @@ def build(L):
       </div>
     </section>
 
-    <section id="work" class="section" aria-labelledby="work-t">
+    <section id="work" class="section band band-light work-band" aria-labelledby="work-t">
       <div class="sec-head reveal">
         <p class="eyebrow">{u("work_kicker")}</p>
         <h2 id="work-t">{u("projects_title")}</h2>
       </div>
       <div class="projs">{featured_html}
       </div>
+    </section>
 
+    <section class="section band dark-band" aria-label="{u("more_projects")}">
       <h3 class="sub reveal">{u("more_projects")}</h3>
       <ul class="minis">{more_html}
       </ul>
     </section>
 
-    <section id="about" class="section about" aria-labelledby="about-t">
+    <section id="about" class="section band band-light about-band about" aria-labelledby="about-t">
       <div class="sec-head reveal">
         <p class="eyebrow">{u("about_kicker")}</p>
         <h2 id="about-t">{u("about_title")}</h2>
@@ -371,7 +373,7 @@ def build(L):
       </div>
     </section>
 
-    <section id="skills" class="section" aria-labelledby="skills-t">
+    <section id="skills" class="section band band-light skills-band" aria-labelledby="skills-t">
       <div class="sec-head reveal">
         <p class="eyebrow">{u("skills_kicker")}</p>
         <h2 id="skills-t">{u("skills_title")}</h2>

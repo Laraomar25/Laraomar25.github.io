@@ -1,6 +1,6 @@
 :root {
-  --bg: #1C3768;
-  --bg-2: #24447C;
+  --bg: #142440;
+  --bg-2: #1F3863;
   --card: rgba(150, 205, 245, .09);
   --card-2: rgba(150, 205, 245, .14);
   --line: rgba(170, 215, 248, .18);
@@ -487,3 +487,55 @@ main { width: min(var(--wrap), calc(100% - 32px)); margin: 0 auto; }
   font-size: 24px; line-height: 1; cursor: pointer;
 }
 .lb-close:hover { background: var(--text); color: var(--bg); }
+
+/* ---------- Light and dark bands, like the original site ---------- */
+.band { position: relative; isolation: isolate; padding: 110px 0; }
+.band::before { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); z-index: -1; }
+.dark-band::before { background: #142440; }
+.dark-band .sub { margin-top: 0; }
+.work-band::before { background: linear-gradient(180deg, #78BFF0 0%, #9FD0F4 55%, #BFE0F9 100%); }
+.about-band::before { background: #BFE0F9; }
+.skills-band::before { background: linear-gradient(180deg, #BFE0F9 0%, #EAF3FF 100%); }
+.about-band { padding-bottom: 40px; }
+.skills-band { padding-top: 60px; }
+.band + .section:not(.band) { padding-top: 110px; }
+
+.band-light {
+  --text: #142440; --muted: #46546A; --dim: #6B7C96;
+  --line: rgba(20, 36, 64, .12); --line-2: rgba(20, 36, 64, .2);
+  --card: rgba(255, 255, 255, .55); --card-2: rgba(255, 255, 255, .8);
+  color: var(--text);
+}
+.band-light .eyebrow { color: #245DDA; }
+.band-light .eyebrow::before { background: #142440; }
+.band-light .proj { background: rgba(255, 255, 255, .6); border-color: rgba(255, 255, 255, .8); box-shadow: 0 30px 60px -30px rgba(20, 36, 64, .35); }
+.band-light .proj::before { display: none; }
+.band-light .kicker { color: #245DDA; }
+.band-light .kicker .dot { background: #245DDA; box-shadow: none; }
+.band-light .kicker .live { color: #0E8F6E; }
+.band-light .kicker .live::before { background: #0E8F6E; }
+.band-light .ps { background: #F7FAFF; border-color: #D3E3F8; }
+.band-light .ps h4::before { background: #78BFF0; }
+.band-light .ps-problem h4::before { background: #245DDA; }
+.band-light .chips li, .band-light .skill li { color: #1F3863; background: #EAF3FF; border-color: #D3E3F8; }
+.band-light .btn-ghost { border-color: rgba(20, 36, 64, .3); background: rgba(255, 255, 255, .5); }
+.band-light .btn-ghost:hover { background: #fff; border-color: #142440; }
+.band-light .about-text { color: #142440; }
+.band-light .tl-tag { color: #245DDA; }
+.band-light .tl-exp .tl-tag { color: #1B4BB5; }
+.band-light .tl-exp .tl-dot { border-color: #245DDA; box-shadow: 0 0 0 6px rgba(36, 93, 218, .15); }
+.band-light .tl-cert .tl-tag { color: #6A58B0; }
+.band-light .tl-dot { background: #fff; }
+.band-light .tl-when { background: rgba(255, 255, 255, .6); }
+.band-light .timeline::before { background: linear-gradient(#245DDA, #8B79C6, transparent); }
+.band-light .langs-box, .band-light .skill { background: rgba(255, 255, 255, .6); border-color: rgba(255, 255, 255, .85); }
+.band-light .lg-bar { background: rgba(20, 36, 64, .1); }
+.band-light .lg-bar i { background: linear-gradient(90deg, #245DDA, #78BFF0); }
+.band-light .cv-card { background: #142440; border-color: transparent; color: #F2F3F8; --text: #F2F3F8; --muted: #C9D6EA; }
+.band-light .cv-card .eyebrow { color: #78BFF0; }
+.band-light .cv-card .eyebrow::before { background: #78BFF0; }
+.band-light .cv-card .btn-ghost { color: #F2F3F8; border-color: rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .06); }
+.band-light .cv-card .btn-ghost:hover { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .5); }
+@media (max-width: 680px) {
+  .band { padding: 72px 0; }
+}
