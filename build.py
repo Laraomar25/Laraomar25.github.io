@@ -12,9 +12,9 @@ SITE = "https://laraomar25.github.io"
 D = json.loads((HERE / "data.json").read_text(encoding="utf-8"))
 
 LANGS = [
-    {"code": "ar", "file": "index.html", "path": "/", "href": "./", "dir": "rtl", "short": "ع", "label": "العربية", "og": "ar_AR"},
-    {"code": "en", "file": "en.html", "path": "/en", "href": "en", "dir": "ltr", "short": "EN", "label": "English", "og": "en_US"},
-    {"code": "tr", "file": "tr.html", "path": "/tr", "href": "tr", "dir": "ltr", "short": "TR", "label": "Türkçe", "og": "tr_TR"},
+    {"code": "ar", "file": "index.html", "path": "/", "href": "index.html", "dir": "rtl", "short": "ع", "label": "العربية", "og": "ar_AR"},
+    {"code": "en", "file": "en.html", "path": "/en", "href": "en.html", "dir": "ltr", "short": "EN", "label": "English", "og": "en_US"},
+    {"code": "tr", "file": "tr.html", "path": "/tr", "href": "tr.html", "dir": "ltr", "short": "TR", "label": "Türkçe", "og": "tr_TR"},
 ]
 
 # Interface text that isn't in data.json
@@ -55,6 +55,7 @@ ACCENTS = {
     "cosigning": ("#245DDA", "#78BFF0"),
     "employment-gap": ("#8B79C6", "#78BFF0"),
     "library-management-system": ("#3D7BE8", "#9FD0F4"),
+    "coach-training-platform": ("#8B79C6", "#9FD0F4"),
 }
 MORE_ICONS = {
     "bank-management-system": '<path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
@@ -294,7 +295,7 @@ def build(L):
   <script type="application/ld+json">{ld}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v={asset_v("style.css")}">
   <script>document.documentElement.classList.add("js")</script>
 </head>

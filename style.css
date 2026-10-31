@@ -17,8 +17,8 @@
   --sky: #78BFF0;
   --sky-2: #BFE0F9;
   --grad: linear-gradient(115deg, #BFE0F9 0%, #78BFF0 45%, #8B79C6 100%);
-  --display: "Readex Pro", "IBM Plex Sans Arabic", system-ui, sans-serif;
-  --body: "IBM Plex Sans Arabic", "Readex Pro", system-ui, sans-serif;
+  --display: "Tajawal", system-ui, sans-serif;
+  --body: "Tajawal", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --radius: 28px;
   --wrap: 1180px;

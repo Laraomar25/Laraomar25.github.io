@@ -204,6 +204,54 @@
    }
   },
   {
+   "id": "coach-training-platform",
+   "featured": true,
+   "title": {
+    "ar": "منصة تدريب «المدرّبة لارا»",
+    "en": "“Coach Lara” Training Platform",
+    "tr": "“Eğitmen Lara” Eğitim Platformu"
+   },
+   "summary": {
+    "ar": "منصة دورات تدريبية تظهر على شاشة لابتوب ثلاثي الأبعاد: دورات ودروس، وتتبّع لتقدّم المتدربات، وقاعة للتدريب المباشر.",
+    "en": "A course platform shown on the screen of a 3D laptop: courses and lessons, trainee progress tracking, and a live training room.",
+    "tr": "3B bir dizüstü bilgisayarın ekranında açılan bir kurs platformu: kurslar ve dersler, katılımcı ilerleme takibi ve canlı eğitim salonu."
+   },
+   "problem": {
+    "ar": "كانت مواد التدريب ملفات متفرقة، فيصعب على المتدربات معرفة الدرس التالي، ويصعب على المدرّبة متابعة تقدّم كل متدربة.",
+    "en": "Training materials were scattered files, so trainees couldn't tell which lesson came next and the trainer couldn't follow each trainee's progress.",
+    "tr": "Eğitim materyalleri dağınık dosyalardı; katılımcılar sıradaki dersi bilemiyor, eğitmen de her katılımcının ilerlemesini takip edemiyordu."
+   },
+   "solution": {
+    "ar": "بنيت منصة تجمع الدورات والدروس في مكان واحد، مع حسابات للمتدربات وتتبّع لما أنهته كل واحدة، وقاعة للتدريب المباشر تفتحها المدرّبة وتغلقها، ورمز QR لإكمال الدرس من الموبايل. تستطيع المدرّبة رفع صور الدورات والدروس من داخل المنصة، وإدارة الحسابات والدورات بأوامر بسيطة. الخادم مبني بمكتبة Python القياسية فقط، والواجهة لابتوب مبني بـ CSS ثلاثي الأبعاد.",
+    "en": "I built a platform that brings courses and lessons into one place, with trainee accounts, tracking of what each trainee has finished, a live training room the trainer can open and close, and a QR code to continue a lesson on the phone. The trainer can upload course and lesson images from inside the platform and manage accounts and courses with simple commands. The server uses only Python's standard library, and the interface is a laptop built with 3D CSS.",
+    "tr": "Kursları ve dersleri tek yerde toplayan bir platform geliştirdim: katılımcı hesapları, her katılımcının bitirdiklerinin takibi, eğitmenin açıp kapattığı canlı eğitim salonu ve dersi telefondan sürdürmek için QR kod. Eğitmen kurs ve ders görsellerini platformun içinden yükleyebiliyor, hesapları ve kursları basit komutlarla yönetebiliyor. Sunucu yalnızca Python standart kütüphanesiyle yazıldı; arayüz 3B CSS ile yapılmış bir dizüstü bilgisayar."
+   },
+   "role": {
+    "ar": "",
+    "en": "",
+    "tr": ""
+   },
+   "tech": [
+    "Python",
+    "SQLite",
+    "JavaScript",
+    "HTML",
+    "CSS 3D"
+   ],
+   "images": [
+    {
+     "src": "images/coach.jpg",
+     "alt": {
+      "ar": "منصة «المدرّبة لارا» على شاشة لابتوب ثلاثي الأبعاد: قائمة الدورات ودروس دورة «الباحث مع Claude» مع تقدّم المتدربة",
+      "en": "The “Coach Lara” platform on a 3D laptop screen: the course list and the lessons of “Researcher with Claude” with the trainee's progress",
+      "tr": "3B dizüstü bilgisayar ekranında “Eğitmen Lara” platformu: kurs listesi ve katılımcının ilerlemesiyle “Claude ile Araştırmacı” kursunun dersleri"
+     }
+    }
+   ],
+   "demo": "https://laraomar25.github.io/coach-demo/",
+   "code": "https://github.com/Laraomar25/coach-demo"
+  },
+  {
    "title": {
     "ar": "متجر كتب إلكتروني",
     "en": "Online Bookstore",
