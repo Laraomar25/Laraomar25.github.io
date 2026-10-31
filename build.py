@@ -39,6 +39,7 @@ EXTRA = {
     "exp_tag": {"ar": "خبرة عملية", "en": "Experience", "tr": "Deneyim"},
     "cert_tag": {"ar": "شهادة", "en": "Certificate", "tr": "Sertifika"},
     "langs_title": {"ar": "اللغات", "en": "Languages", "tr": "Diller"},
+    "zoom": {"ar": "تكبير الصورة", "en": "Enlarge image", "tr": "Görseli büyüt"},
     "flip_back": {"ar": "اضغط للعودة إلى الرسمة", "en": "Tap to go back to the drawing", "tr": "Çizime dönmek için dokun"},
 }
 
@@ -152,6 +153,13 @@ def build(L):
           </span>
         </button>'''
 
+    def zoom_btn(img, p):
+        if not img:
+            return ""
+        return (f'<button class="zoom" type="button" data-src="{e(img["src"])}" data-alt="{e(t(img["alt"], lang))}">'
+                f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4M11 8v6M8 11h6"/></svg>'
+                f'<span>{u("zoom")}</span></button>')
+
     def project_card(p, i):
         a1, a2 = ACCENTS.get(p["id"], ("#8B7BFF", "#2EC5FF"))
         img = (p.get("images") or [None])[0]
@@ -176,7 +184,7 @@ def build(L):
         flip = ""
         return f'''
     <article class="proj reveal{flip}" id="{e(p["id"])}" style="--a1:{a1};--a2:{a2}" aria-labelledby="{e(p["id"])}-t">
-      <div class="proj-media">{card3d(p, host, media) if art_for(p) else f"""
+      <div class="proj-media">{card3d(p, host, media) + zoom_btn(img, p) if art_for(p) else f"""
         <div class="browser">
           <div class="browser-bar"><i></i><i></i><i></i><span dir="ltr">{e(host)}</span></div>
           <div class="browser-shot">{media}</div>
@@ -381,6 +389,11 @@ def build(L):
     <p>© {year} {e(name)}. {u("rights")}</p>
     <a href="#main">{u("back_to_top")} ↑</a>
   </footer>
+
+  <dialog class="lightbox" aria-label="{u("zoom")}">
+    <button class="lb-close" type="button" aria-label="{u("close")}">×</button>
+    <img alt="">
+  </dialog>
 
   <script src="main.js" defer></script>
 </body>

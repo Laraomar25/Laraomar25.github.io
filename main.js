@@ -25,6 +25,22 @@
     if (location.search.includes("flipped")) set(true);
   });
 
+  // Enlarge a project screenshot
+  const box = document.querySelector(".lightbox");
+  if (box && box.showModal) {
+    const img = box.querySelector("img");
+    document.querySelectorAll(".zoom").forEach(btn => {
+      btn.addEventListener("click", () => {
+        img.src = btn.dataset.src; img.alt = btn.dataset.alt;
+        box.showModal();
+      });
+    });
+    box.querySelector(".lb-close").addEventListener("click", () => box.close());
+    box.addEventListener("click", ev => { if (ev.target === box) box.close(); });
+  } else {
+    document.querySelectorAll(".zoom").forEach(b => b.remove());
+  }
+
   // Copy email
   document.querySelectorAll("[data-copy]").forEach(btn => {
     const label = btn.querySelector("span");
