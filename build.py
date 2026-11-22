@@ -55,10 +55,10 @@ def art_for(p):
 
 # Each featured project gets its own colour pair
 ACCENTS = {
-    "cosigning": ("#60A7EA", "#A9CFF4"),
-    "employment-gap": ("#60A7EA", "#A9CFF4"),
-    "library-management-system": ("#60A7EA", "#A9CFF4"),
-    "coach-training-platform": ("#60A7EA", "#A9CFF4"),
+    "cosigning": ("#B08D57", "#E2D3B8"),
+    "employment-gap": ("#B08D57", "#E2D3B8"),
+    "library-management-system": ("#B08D57", "#E2D3B8"),
+    "coach-training-platform": ("#B08D57", "#E2D3B8"),
 }
 MORE_ICONS = {
     "bank-management-system": '<path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
@@ -146,6 +146,10 @@ def build(L):
         '<span class="p">};</span><span class="caret" aria-hidden="true"></span>',
     ]
     code = "\n".join(f'<span class="ln">{i}</span>{l}' for i, l in enumerate(code_lines, 1))
+    code_card = f'''<div class="code-card" dir="ltr">
+          <div class="code-bar"><i></i><i></i><i></i><b class="tab on">Lara.ts</b><b class="tab">Python</b><b class="tab">SQL</b></div>
+          <pre><code>{code}</code></pre>
+        </div>'''
 
     # ---------- featured projects ----------
     def card3d(p, host, media):
@@ -176,7 +180,7 @@ def build(L):
                 f'<span>{u("zoom")}</span></button>')
 
     def project_card(p, i):
-        a1, a2 = ACCENTS.get(p["id"], ("#60A7EA", "#A9CFF4"))
+        a1, a2 = ACCENTS.get(p["id"], ("#B08D57", "#E2D3B8"))
         img = (p.get("images") or [None])[0]
         media = (
             f'<img src="{e(img["src"])}" alt="{e(t(img["alt"], lang))}" loading="lazy" width="1440" height="1080">'
@@ -290,7 +294,7 @@ def build(L):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(t(site["title"], lang))}</title>
   <meta name="description" content="{e(t(site["description"], lang))}">
-  <meta name="theme-color" content="#0C1B48">
+  <meta name="theme-color" content="#14213D">
   <link rel="canonical" href="{url}">
 {alts}
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -337,10 +341,7 @@ def build(L):
         </div>
       </div>
       <div class="hero-art reveal" aria-hidden="true">
-        <div class="code-card" dir="ltr">
-          <div class="code-bar"><i></i><i></i><i></i><b class="tab on">Lara.ts</b><b class="tab">Python</b><b class="tab">SQL</b></div>
-          <pre><code>{code}</code></pre>
-        </div>
+        {code_card}
       </div>
     </section>
 
@@ -354,6 +355,9 @@ def build(L):
         <div><dt>{len(live)}</dt><dd>{u("live_count")}</dd></div>
         <div><dt>3</dt><dd>{u("langs_count")}</dd></div>
       </dl>
+      <div class="hero-art hero-art-m" aria-hidden="true">
+        {code_card}
+      </div>
     </section>
 
     <section id="work" class="section band band-light work-band" aria-labelledby="work-t">
