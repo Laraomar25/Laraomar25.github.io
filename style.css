@@ -93,6 +93,7 @@ img { max-width: 100%; display: block; }
 .logo { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--grad); text-decoration: none; font-family: var(--display); font-weight: 700; color: var(--navy); font-size: 15px; letter-spacing: .02em; box-shadow: 0 6px 20px -6px rgba(176, 141, 87, .6); }
 .nav { display: flex; gap: 4px; order: -1; }
 .brand { order: 1; display: flex; align-items: center; gap: 14px; }
+.menu-btn { display: none; }
 .brand .hello { font-size: 16px; color: var(--text); white-space: nowrap; }
 .langs { order: 0; margin-inline-start: auto; }
 .nav a { position: relative; }
@@ -415,6 +416,18 @@ main { width: min(var(--wrap), calc(100% - 32px)); margin: 0 auto; }
 @media (max-width: 680px) {
   body { font-size: 16px; }
   .nav { display: none; }
+  .menu-btn { order: 2; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border-radius: 12px; border: 1px solid var(--line-2); background: transparent; color: var(--text); cursor: pointer; }
+  .menu-btn .i-close, .menu-btn[aria-expanded="true"] .i-open { display: none; }
+  .menu-btn[aria-expanded="true"] .i-close { display: block; }
+  .top.open .nav {
+    display: flex; flex-direction: column; gap: 2px;
+    position: absolute; top: 100%; inset-inline: 0;
+    padding: 10px 12px 18px; background: var(--navy); border-bottom: 1px solid var(--line);
+    box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .5);
+  }
+  .top.open .nav a { padding: 13px 14px; font-size: 17px; border-radius: 12px; }
+  .top.open .nav a.on { background: rgba(255, 255, 255, .06); }
+  .top.open .nav a.on::after { bottom: 6px; inset-inline: 14px auto; width: 28px; }
   .top { padding: 10px 12px; }
   .brand { order: -2; gap: 10px; }
   .brand .hello { font-size: 14px; }

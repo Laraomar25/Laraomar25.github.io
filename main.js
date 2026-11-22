@@ -88,4 +88,13 @@
       label.textContent = open ? btn.dataset.less : btn.dataset.more;
     });
   });
+  // Phone menu: the ☰ button opens the list of sections
+  const top = document.querySelector(".top");
+  const menuBtn = document.querySelector(".menu-btn");
+  if (top && menuBtn) {
+    const setOpen = open => { top.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", open ? "true" : "false"); };
+    menuBtn.addEventListener("click", () => setOpen(!top.classList.contains("open")));
+    document.querySelectorAll(".nav a").forEach(a => a.addEventListener("click", () => setOpen(false)));
+    document.addEventListener("keydown", ev => { if (ev.key === "Escape") setOpen(false); });
+  }
 })();

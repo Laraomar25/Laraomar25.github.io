@@ -1,4 +1,4 @@
-"""Builds index.html (Arabic), en.html and tr.html from data.json.
+"""Builds index.html (English, home page), ar.html and tr.html from data.json; en.html redirects home.
 
 Edit data.json, then run:  python3 build.py
 """
@@ -12,8 +12,8 @@ SITE = "https://laraomar25.github.io"
 D = json.loads((HERE / "data.json").read_text(encoding="utf-8"))
 
 LANGS = [
-    {"code": "ar", "file": "index.html", "path": "/", "href": "index.html", "dir": "rtl", "short": "ع", "label": "العربية", "og": "ar_AR"},
-    {"code": "en", "file": "en.html", "path": "/en", "href": "en.html", "dir": "ltr", "short": "EN", "label": "English", "og": "en_US"},
+    {"code": "ar", "file": "ar.html", "path": "/ar", "href": "ar.html", "dir": "rtl", "short": "ع", "label": "العربية", "og": "ar_AR"},
+    {"code": "en", "file": "index.html", "path": "/", "href": "index.html", "dir": "ltr", "short": "EN", "label": "English", "og": "en_US"},
     {"code": "tr", "file": "tr.html", "path": "/tr", "href": "tr.html", "dir": "ltr", "short": "TR", "label": "Türkçe", "og": "tr_TR"},
 ]
 
@@ -325,7 +325,8 @@ def build(L):
       <a class="logo" href="#main" aria-label="{e(name)}"><span>{e(prof["initials"])}</span></a>
       <p class="hello"><span class="wave" aria-hidden="true">👋</span> {u("hero_hi")}</p>
     </div>
-    <nav class="nav" aria-label="{u("menu")}">{nav}</nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{u("menu")}"><svg class="ico i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="ico i-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <nav class="nav" id="site-nav" aria-label="{u("menu")}">{nav}</nav>
     <div class="langs" role="group" aria-label="{u("language")}" dir="ltr">{langsw}</div>
   </header>
 
@@ -437,3 +438,12 @@ if __name__ == "__main__":
             html = html.replace("C#", "C#\u200e")
         (HERE / L["file"]).write_text(html, encoding="utf-8")
         print("built", L["file"])
+
+    # English is now the home page; keep old en.html links working
+    (HERE / "en.html").write_text(
+        '<!doctype html><html lang="en"><meta charset="utf-8"><title>Lara Alothmani</title>'
+        f'<link rel="canonical" href="{SITE}/"><meta name="robots" content="noindex">'
+        '<meta http-equiv="refresh" content="0; url=./">'
+        '<script>location.replace("./" + location.hash)</script>'
+        '<a href="./">Lara Alothmani</a></html>\n', encoding="utf-8")
+    print("built en.html (redirect to home)")
