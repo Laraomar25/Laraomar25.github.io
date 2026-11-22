@@ -59,4 +59,33 @@
       setTimeout(() => { label.textContent = original; btn.classList.remove("done"); }, 2000);
     });
   });
+  // Menu: underline the section currently on screen
+  const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
+  const targets = navLinks.map(a => [a, document.querySelector(a.getAttribute("href"))]).filter(x => x[1]);
+  if (targets.length) {
+    const mark = current => navLinks.forEach(a => {
+      a.classList.toggle("on", a === current);
+      if (a === current) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+    const onScroll = () => {
+      let current = targets[0][0];
+      const line = window.innerHeight * 0.35;
+      targets.forEach(([a, sec]) => { if (sec.id !== "main" && sec.getBoundingClientRect().top <= line) current = a; });
+      mark(current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+  // Projects: "Read more" shows the problem / solution / role
+  document.querySelectorAll(".more-btn").forEach(btn => {
+    const box = document.getElementById(btn.getAttribute("aria-controls"));
+    const label = btn.querySelector("span");
+    if (!box) { btn.remove(); return; }
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      box.classList.toggle("open", open);
+      label.textContent = open ? btn.dataset.less : btn.dataset.more;
+    });
+  });
 })();

@@ -93,6 +93,7 @@
    "demo": "https://laraomar25.github.io/CoSigning/",
    "code": "https://github.com/Laraomar25/CoSigning",
    "id": "cosigning",
+   "badge": {"ar": "مدعوم من TÜBİTAK 2209-A", "en": "Supported by TÜBİTAK 2209-A", "tr": "TÜBİTAK 2209-A destekli"},
    "art": "cosigning"
   },
   {

@@ -20,6 +20,9 @@ LANGS = [
 # Interface text that isn't in data.json
 EXTRA = {
     "hero_hi": {"ar": "مرحبًا، أنا", "en": "Hi, I'm", "tr": "Merhaba, ben"},
+    "nav_home": {"ar": "الصفحة الرئيسية", "en": "Home", "tr": "Ana sayfa"},
+    "read_more": {"ar": "اقرأ المزيد", "en": "Read more", "tr": "Devamını oku"},
+    "read_less": {"ar": "إخفاء التفاصيل", "en": "Show less", "tr": "Daha az göster"},
     "try_bot": {"ar": "جرّب البوت على تليجرام", "en": "Try the bot on Telegram", "tr": "Botu Telegram'da dene"},
     "copy": {"ar": "نسخ", "en": "Copy", "tr": "Kopyala"},
     "copied": {"ar": "تم النسخ", "en": "Copied", "tr": "Kopyalandı"},
@@ -52,10 +55,10 @@ def art_for(p):
 
 # Each featured project gets its own colour pair
 ACCENTS = {
-    "cosigning": ("#245DDA", "#78BFF0"),
-    "employment-gap": ("#8B79C6", "#78BFF0"),
-    "library-management-system": ("#3D7BE8", "#9FD0F4"),
-    "coach-training-platform": ("#8B79C6", "#9FD0F4"),
+    "cosigning": ("#60A7EA", "#A9CFF4"),
+    "employment-gap": ("#60A7EA", "#A9CFF4"),
+    "library-management-system": ("#60A7EA", "#A9CFF4"),
+    "coach-training-platform": ("#60A7EA", "#A9CFF4"),
 }
 MORE_ICONS = {
     "bank-management-system": '<path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/>',
@@ -122,7 +125,11 @@ def build(L):
     )
 
     nav_items = [("work", "nav_projects"), ("about", "nav_about"), ("cv", "nav_cv"), ("skills", "nav_skills"), ("contact", "nav_contact")]
-    nav = "".join(f'<a href="#{a}">{u(k)}</a>' for a, k in nav_items)
+    nav = f'<a href="#main" class="on" aria-current="true">{u("nav_home")}</a>' + "".join(f'<a href="#{a}">{u(k)}</a>' for a, k in nav_items)
+
+    # Tagline: the last two words get the yellow underline
+    tag_words = t(prof["tagline"], lang).split(" ")
+    tagline_html = e(" ".join(tag_words[:-2])) + f' <span class="mark">{e(" ".join(tag_words[-2:]))}</span>' 
 
     # ---------- hero code card ----------
     tech = []
@@ -169,7 +176,7 @@ def build(L):
                 f'<span>{u("zoom")}</span></button>')
 
     def project_card(p, i):
-        a1, a2 = ACCENTS.get(p["id"], ("#245DDA", "#78BFF0"))
+        a1, a2 = ACCENTS.get(p["id"], ("#60A7EA", "#A9CFF4"))
         img = (p.get("images") or [None])[0]
         media = (
             f'<img src="{e(img["src"])}" alt="{e(t(img["alt"], lang))}" loading="lazy" width="1440" height="1080">'
@@ -201,8 +208,10 @@ def build(L):
       <div class="proj-body">
         <p class="kicker"><span class="dot"></span>{u("featured")}{f'<span class="live">{u("live")}</span>' if p.get("demo") else ""}</p>
         <h3 id="{e(p["id"])}-t">{e(t(p["title"], lang))}</h3>
+        {f'<p class="badge"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg><span>{e(t(p["badge"], lang))}</span></p>' if p.get("badge") else ""}
         <p class="lead">{e(t(p.get("summary"), lang))}</p>
-        <div class="ps-wrap">{blocks}</div>
+        <div class="ps-wrap" id="{e(p["id"])}-more">{blocks}</div>
+        <button class="more-btn" type="button" aria-expanded="false" aria-controls="{e(p["id"])}-more" data-more="{u("read_more")}" data-less="{u("read_less")}"><span>{u("read_more")}</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         {f'<ul class="chips" dir="ltr" aria-label="{u("tech")}">{chips}</ul>' if chips else ""}
         <div class="actions">{btns}</div>
       </div>
@@ -281,7 +290,7 @@ def build(L):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{e(t(site["title"], lang))}</title>
   <meta name="description" content="{e(t(site["description"], lang))}">
-  <meta name="theme-color" content="#142440">
+  <meta name="theme-color" content="#0C1B48">
   <link rel="canonical" href="{url}">
 {alts}
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -308,7 +317,10 @@ def build(L):
   </div>
 
   <header class="top">
-    <a class="logo" href="#main" aria-label="{e(name)}"><span>{e(prof["initials"])}</span></a>
+    <div class="brand">
+      <a class="logo" href="#main" aria-label="{e(name)}"><span>{e(prof["initials"])}</span></a>
+      <p class="hello"><span class="wave" aria-hidden="true">👋</span> {u("hero_hi")}</p>
+    </div>
     <nav class="nav" aria-label="{u("menu")}">{nav}</nav>
     <div class="langs" role="group" aria-label="{u("language")}" dir="ltr">{langsw}</div>
   </header>
@@ -316,30 +328,32 @@ def build(L):
   <main id="main">
     <section class="hero">
       <div class="hero-text">
-        <p class="hello reveal"><span class="wave" aria-hidden="true">👋</span> {u("hero_hi")}</p>
         <h1 class="name reveal">{e(name)}</h1>
         <p class="role reveal">{e(t(prof["title"], lang))} <span class="sep">·</span> {e(t(prof["location"], lang))}</p>
-        <p class="tagline reveal">{e(t(prof["tagline"], lang))}</p>
+        <p class="tagline reveal">{tagline_html}</p>
         <div class="hero-cta reveal">
           <a class="btn-demo" href="#work">{u("cta_projects")}{ARROW}</a>
           <a class="btn-ghost" href="#contact">{u("cta_contact")}</a>
         </div>
-        <dl class="facts reveal">
-          <div><dt>{len(projects)}</dt><dd>{u("projects_count")}</dd></div>
-          <div><dt>{len(live)}</dt><dd>{u("live_count")}</dd></div>
-          <div><dt>3</dt><dd>{u("langs_count")}</dd></div>
-        </dl>
       </div>
       <div class="hero-art reveal" aria-hidden="true">
         <div class="code-card" dir="ltr">
-          <div class="code-bar"><i></i><i></i><i></i><span>lara.ts</span></div>
+          <div class="code-bar"><i></i><i></i><i></i><b class="tab on">Lara.ts</b><b class="tab">Python</b><b class="tab">SQL</b></div>
           <pre><code>{code}</code></pre>
         </div>
-        <span class="float f1">Python</span>
-        <span class="float f2">C#</span>
-        <span class="float f3">AI · ML</span>
-        <span class="float f4">SQL</span>
       </div>
+    </section>
+
+    <section class="band band-light stats-band" aria-label="{u("projects_count")}">
+      <svg class="hero-wave" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+        <path class="w1" d="M0 46 C 140 52 260 94 420 122 C 560 148 760 166 980 170 L0 170 Z"/>
+        <path class="w2" d="M0 138 C 280 112 540 124 830 110 C 1090 98 1290 76 1440 56 L1440 170 L0 170 Z"/>
+      </svg>
+      <dl class="facts reveal">
+        <div><dt>{len(projects)}</dt><dd>{u("projects_count")}</dd></div>
+        <div><dt>{len(live)}</dt><dd>{u("live_count")}</dd></div>
+        <div><dt>3</dt><dd>{u("langs_count")}</dd></div>
+      </dl>
     </section>
 
     <section id="work" class="section band band-light work-band" aria-labelledby="work-t">
