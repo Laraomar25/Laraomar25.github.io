@@ -44,7 +44,41 @@ EXTRA = {
     "cert_tag": {"ar": "شهادة", "en": "Certificate", "tr": "Sertifika"},
     "langs_title": {"ar": "اللغات", "en": "Languages", "tr": "Diller"},
     "zoom": {"ar": "تكبير الصورة", "en": "Enlarge image", "tr": "Görseli büyüt"},
+    "collab_btn": {"ar": "اقترح تعاونًا", "en": "Suggest a collaboration", "tr": "İş birliği öner"},
+    "collab_title": {"ar": "طلب تعاون", "en": "Collaboration request", "tr": "İş birliği talebi"},
+    "collab_name": {"ar": "الاسم الكامل", "en": "Full name", "tr": "Ad soyad"},
+    "collab_idea": {"ar": "وصف مختصر لفكرة التعاون", "en": "Short description of the idea", "tr": "İş birliği fikrinin kısa açıklaması"},
+    "collab_file": {"ar": "مرفق PDF (وصف المشروع أو نموذج عمل، حتى 5 MB)", "en": "PDF attachment (project description or work sample, up to 5 MB)", "tr": "PDF eki (proje açıklaması veya çalışma örneği, en fazla 5 MB)"},
+    "collab_pick": {"ar": "اختر ملف PDF", "en": "Choose a PDF", "tr": "PDF seç"},
+    "collab_note": {"ar": "سيُحفظ الملف وبيانات الطلب في Google Drive الخاص بي لمراجعة طلبك.", "en": "Your file and request details will be saved in my Google Drive so I can review your request.", "tr": "Dosyanız ve talep bilgileriniz, talebinizi inceleyebilmem için Google Drive'ıma kaydedilir."},
+    "collab_send": {"ar": "إرسال الطلب", "en": "Send request", "tr": "Talebi gönder"},
     "flip_back": {"ar": "اضغط للعودة إلى الرسمة", "en": "Tap to go back to the drawing", "tr": "Çizime dönmek için dokun"},
+}
+
+# Messages used by collab.js
+COLLAB_TEXT = {
+    "send": EXTRA["collab_send"],
+    "sending": {"ar": "جارٍ الإرسال…", "en": "Sending…", "tr": "Gönderiliyor…"},
+    "no_file": {"ar": "لم يُختر ملف بعد", "en": "No file chosen yet", "tr": "Henüz dosya seçilmedi"},
+    "preparing": {"ar": "جارٍ تجهيز الطلب…", "en": "Preparing your request…", "tr": "Talebiniz hazırlanıyor…"},
+    "uploading": {"ar": "جارٍ رفع الملف…", "en": "Uploading the file…", "tr": "Dosya yükleniyor…"},
+    "retrying": {"ar": "انقطع الرفع، نعيد المحاولة…", "en": "The upload was interrupted, trying again…", "tr": "Yükleme kesildi, yeniden deneniyor…"},
+    "verifying": {"ar": "جارٍ التأكد من حفظ الملف…", "en": "Checking that the file was saved…", "tr": "Dosyanın kaydedildiği doğrulanıyor…"},
+    "success": {"ar": "وصل طلبك وحُفظ الملف بنجاح. رقم الطلب: {id}", "en": "Your request was received and the file is saved. Request number: {id}", "tr": "Talebiniz alındı ve dosya kaydedildi. Talep numarası: {id}"},
+    "e_check": {"ar": "راجع الحقول المحدّدة ثم أعد الإرسال.", "en": "Please check the marked fields and send again.", "tr": "Lütfen işaretli alanları kontrol edip tekrar gönderin."},
+    "e_name": {"ar": "اكتب الاسم الكامل (من حرفين إلى 80).", "en": "Enter your full name (2 to 80 characters).", "tr": "Ad soyad girin (2-80 karakter)."},
+    "e_email": {"ar": "اكتب بريدًا إلكترونيًا صحيحًا.", "en": "Enter a valid email address.", "tr": "Geçerli bir e-posta adresi girin."},
+    "e_idea": {"ar": "اكتب وصفًا من 20 إلى 2000 حرف.", "en": "Describe the idea in 20 to 2000 characters.", "tr": "Fikri 20-2000 karakterle açıklayın."},
+    "e_file_missing": {"ar": "أرفق ملف PDF.", "en": "Attach a PDF file.", "tr": "Bir PDF dosyası ekleyin."},
+    "e_file_type": {"ar": "يجب أن يكون المرفق ملف PDF.", "en": "The attachment must be a PDF file.", "tr": "Ek bir PDF dosyası olmalıdır."},
+    "e_file_size": {"ar": "حجم الملف أكبر من 5 MB.", "en": "The file is larger than 5 MB.", "tr": "Dosya 5 MB'den büyük."},
+    "e_bad_file": {"ar": "الملف الذي وصل ليس PDF سليمًا أو لم يصل كاملًا، ولم يُحفظ. اختر ملفًا آخر أو أعد الإرسال.", "en": "The file that arrived was incomplete or not a valid PDF, so it was not kept. Choose another file or send again.", "tr": "Gelen dosya eksik ya da geçerli bir PDF değil, bu yüzden saklanmadı. Başka bir dosya seçin veya tekrar gönderin."},
+    "e_rate": {"ar": "أُرسلت طلبات كثيرة. حاول مجددًا بعد {n} دقيقة تقريبًا.", "en": "Too many requests. Please try again in about {n} min.", "tr": "Çok fazla istek gönderildi. Yaklaşık {n} dk sonra tekrar deneyin."},
+    "e_network": {"ar": "تعذّر الاتصال بالخدمة. تحقّق من الإنترنت ثم اضغط إرسال مجددًا؛ لن يتكرر طلبك.", "en": "Could not reach the service. Check your connection and press send again; your request will not be duplicated.", "tr": "Hizmete ulaşılamadı. Bağlantınızı kontrol edip tekrar gönderin; talebiniz yinelenmez."},
+    "e_upload": {"ar": "لم يكتمل رفع الملف. اضغط إرسال مجددًا للمتابعة؛ لن يتكرر طلبك.", "en": "The upload did not finish. Press send again to continue; your request will not be duplicated.", "tr": "Yükleme tamamlanmadı. Devam etmek için tekrar gönderin; talebiniz yinelenmez."},
+    "e_direct": {"ar": "تعذّر رفع الملف مباشرة إلى Google Drive من هذا المتصفح. جرّب شبكة أو متصفحًا آخر، أو أرسل الملف بالبريد.", "en": "The file could not be uploaded directly to Google Drive from this browser. Try another network or browser, or send it by email.", "tr": "Dosya bu tarayıcıdan doğrudan Google Drive'a yüklenemedi. Başka bir ağ veya tarayıcı deneyin ya da e-postayla gönderin."},
+    "e_server": {"ar": "حدث خطأ أثناء حفظ الطلب ولم يتأكد الحفظ. اضغط إرسال مجددًا بعد قليل؛ لن يتكرر طلبك.", "en": "Something went wrong and saving was not confirmed. Press send again shortly; your request will not be duplicated.", "tr": "Bir hata oluştu ve kayıt doğrulanamadı. Biraz sonra tekrar gönderin; talebiniz yinelenmez."},
+    "e_off": {"ar": "استقبال الطلبات غير مفعّل بعد. راسلني بالبريد الإلكتروني.", "en": "Requests are not open yet. Please email me instead.", "tr": "Talep alımı henüz açık değil. Lütfen e-posta gönderin."},
 }
 
 
@@ -73,6 +107,8 @@ COPY_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" 
 GH_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>'
 DL_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'
 EYE_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>'
+HANDS_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3.2"/><circle cx="16" cy="9" r="3.2"/><path d="M2.5 19c.4-3 2.5-4.8 5.5-4.8 1.6 0 3 .5 4 1.4 1-.9 2.4-1.4 4-1.4 3 0 5.1 1.8 5.5 4.8"/></svg>'
+FILE_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-5M9.5 14.5 12 12l2.5 2.5"/></svg>'
 STAR = '<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 63 21l21-4-4 21 17 12-17 13 4 21-21-4-13 17-13-17-21 4 4-21L3 50l17-12-4-21 21 4z"/></svg>'
 
 
@@ -286,6 +322,43 @@ def build(L):
     if contact.get("github"):
         contact_btns += f'<a class="btn-ghost light" href="{e(contact["github"])}" target="_blank" rel="noopener">{GH_ICO}{u("github")}{new_tab}</a>'
 
+    contact_btns += (f'<button class="btn-demo collab-btn" type="button" aria-expanded="false" aria-controls="collab-form">'
+                     f'{HANDS_ICO}{u("collab_btn")}</button>')
+    collab_text = json.dumps({k: t(v, lang) for k, v in COLLAB_TEXT.items()}, ensure_ascii=False).replace("</", "<\\/")
+
+    def field(key, label, control):
+        return (f'<div class="collab-field"><label for="collab-{key}">{label}</label>{control}'
+                f'<p class="collab-err" id="collab-{key}-err" hidden></p></div>')
+
+    collab_html = f'''
+        <form class="collab-form" id="collab-form" data-api="{e(contact.get("collab_api") or "")}" aria-labelledby="collab-t" novalidate hidden>
+          <h3 id="collab-t">{u("collab_title")}</h3>
+          <fieldset>
+            <div class="collab-row">
+              {field("name", u("collab_name"), '<input id="collab-name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="collab-name-err">')}
+              {field("email", u("email"), '<input id="collab-email" name="email" type="email" dir="ltr" autocomplete="email" maxlength="254" required aria-describedby="collab-email-err">')}
+            </div>
+            {field("idea", u("collab_idea"), '<textarea id="collab-idea" name="idea" rows="5" maxlength="2000" required aria-describedby="collab-idea-err"></textarea>')}
+            <div class="collab-field">
+              <span class="collab-label">{u("collab_file")}</span>
+              <div class="collab-file">
+                <input class="sr-only" id="collab-file" name="file" type="file" accept="application/pdf,.pdf" required aria-describedby="collab-file-name collab-file-err collab-note">
+                <label class="btn-ghost" for="collab-file">{FILE_ICO}{u("collab_pick")}</label>
+                <span class="collab-file-name" id="collab-file-name" dir="auto">{e(t(COLLAB_TEXT["no_file"], lang))}</span>
+              </div>
+              <p class="collab-err" id="collab-file-err" hidden></p>
+            </div>
+            <p class="collab-note" id="collab-note">{u("collab_note")}</p>
+          </fieldset>
+          <progress class="collab-bar" max="1" value="0" hidden aria-label="{e(t(COLLAB_TEXT["uploading"], lang))}"></progress>
+          <p class="collab-status" role="status" aria-live="polite" tabindex="-1"></p>
+          <div class="collab-end">
+            <button class="btn-demo" type="submit"><span>{u("collab_send")}</span></button>
+            <button class="btn-ghost collab-cancel" type="button">{u("close")}</button>
+          </div>
+        </form>
+        <script type="application/json" id="collab-text">{collab_text}</script>'''
+
     year = "2026"
     return f'''<!doctype html>
 <html lang="{lang}" dir="{L["dir"]}">
@@ -409,7 +482,7 @@ def build(L):
         <h2 id="contact-t">{u("contact_title")}</h2>
         <p class="contact-text">{u("contact_text")}</p>
         <div class="contact-actions">{contact_btns}
-        </div>
+        </div>{collab_html}
       </div>
     </section>
   </main>
@@ -425,12 +498,15 @@ def build(L):
   </dialog>
 
   <script src="main.js?v={asset_v("main.js")}" defer></script>
+  <script src="collab.js?v={asset_v("collab.js")}" defer></script>
 </body>
 </html>
 '''
 
 
 if __name__ == "__main__":
+    if not D["contact"].get("collab_api"):
+        print('note: contact.collab_api in data.json is empty, so the collaboration form cannot send yet')
     for L in LANGS:
         html = build(L)
         if L["dir"] == "rtl":

@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=e9d99564">
+  <link rel="stylesheet" href="style.css?v=cfc3739b">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -346,8 +346,35 @@
         <div class="mail">
           <a class="mail-link" href="mailto:laraomar256@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">laraomar256@gmail.com</span></a>
           <button class="copy" type="button" data-copy="laraomar256@gmail.com" data-done="Kopyalandı"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Kopyala</span></button>
-        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Özgeçmişi indir</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>GitHub hesabım<span class="sr-only"> (yeni sekmede açılır)</span></a>
+        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Özgeçmişi indir</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>GitHub hesabım<span class="sr-only"> (yeni sekmede açılır)</span></a><button class="btn-demo collab-btn" type="button" aria-expanded="false" aria-controls="collab-form"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3.2"/><circle cx="16" cy="9" r="3.2"/><path d="M2.5 19c.4-3 2.5-4.8 5.5-4.8 1.6 0 3 .5 4 1.4 1-.9 2.4-1.4 4-1.4 3 0 5.1 1.8 5.5 4.8"/></svg>İş birliği öner</button>
         </div>
+        <form class="collab-form" id="collab-form" data-api="https://portfolio-collab.laraomar256.workers.dev" aria-labelledby="collab-t" novalidate hidden>
+          <h3 id="collab-t">İş birliği talebi</h3>
+          <fieldset>
+            <div class="collab-row">
+              <div class="collab-field"><label for="collab-name">Ad soyad</label><input id="collab-name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="collab-name-err"><p class="collab-err" id="collab-name-err" hidden></p></div>
+              <div class="collab-field"><label for="collab-email">E-posta</label><input id="collab-email" name="email" type="email" dir="ltr" autocomplete="email" maxlength="254" required aria-describedby="collab-email-err"><p class="collab-err" id="collab-email-err" hidden></p></div>
+            </div>
+            <div class="collab-field"><label for="collab-idea">İş birliği fikrinin kısa açıklaması</label><textarea id="collab-idea" name="idea" rows="5" maxlength="2000" required aria-describedby="collab-idea-err"></textarea><p class="collab-err" id="collab-idea-err" hidden></p></div>
+            <div class="collab-field">
+              <span class="collab-label">PDF eki (proje açıklaması veya çalışma örneği, en fazla 5 MB)</span>
+              <div class="collab-file">
+                <input class="sr-only" id="collab-file" name="file" type="file" accept="application/pdf,.pdf" required aria-describedby="collab-file-name collab-file-err collab-note">
+                <label class="btn-ghost" for="collab-file"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-5M9.5 14.5 12 12l2.5 2.5"/></svg>PDF seç</label>
+                <span class="collab-file-name" id="collab-file-name" dir="auto">Henüz dosya seçilmedi</span>
+              </div>
+              <p class="collab-err" id="collab-file-err" hidden></p>
+            </div>
+            <p class="collab-note" id="collab-note">Dosyanız ve talep bilgileriniz, talebinizi inceleyebilmem için Google Drive&#x27;ıma kaydedilir.</p>
+          </fieldset>
+          <progress class="collab-bar" max="1" value="0" hidden aria-label="Dosya yükleniyor…"></progress>
+          <p class="collab-status" role="status" aria-live="polite" tabindex="-1"></p>
+          <div class="collab-end">
+            <button class="btn-demo" type="submit"><span>Talebi gönder</span></button>
+            <button class="btn-ghost collab-cancel" type="button">Kapat</button>
+          </div>
+        </form>
+        <script type="application/json" id="collab-text">{"send": "Talebi gönder", "sending": "Gönderiliyor…", "no_file": "Henüz dosya seçilmedi", "preparing": "Talebiniz hazırlanıyor…", "uploading": "Dosya yükleniyor…", "retrying": "Yükleme kesildi, yeniden deneniyor…", "verifying": "Dosyanın kaydedildiği doğrulanıyor…", "success": "Talebiniz alındı ve dosya kaydedildi. Talep numarası: {id}", "e_check": "Lütfen işaretli alanları kontrol edip tekrar gönderin.", "e_name": "Ad soyad girin (2-80 karakter).", "e_email": "Geçerli bir e-posta adresi girin.", "e_idea": "Fikri 20-2000 karakterle açıklayın.", "e_file_missing": "Bir PDF dosyası ekleyin.", "e_file_type": "Ek bir PDF dosyası olmalıdır.", "e_file_size": "Dosya 5 MB'den büyük.", "e_bad_file": "Gelen dosya eksik ya da geçerli bir PDF değil, bu yüzden saklanmadı. Başka bir dosya seçin veya tekrar gönderin.", "e_rate": "Çok fazla istek gönderildi. Yaklaşık {n} dk sonra tekrar deneyin.", "e_network": "Hizmete ulaşılamadı. Bağlantınızı kontrol edip tekrar gönderin; talebiniz yinelenmez.", "e_upload": "Yükleme tamamlanmadı. Devam etmek için tekrar gönderin; talebiniz yinelenmez.", "e_direct": "Dosya bu tarayıcıdan doğrudan Google Drive'a yüklenemedi. Başka bir ağ veya tarayıcı deneyin ya da e-postayla gönderin.", "e_server": "Bir hata oluştu ve kayıt doğrulanamadı. Biraz sonra tekrar gönderin; talebiniz yinelenmez.", "e_off": "Talep alımı henüz açık değil. Lütfen e-posta gönderin."}</script>
       </div>
     </section>
   </main>
@@ -363,5 +390,6 @@
   </dialog>
 
   <script src="main.js?v=fac94cc7" defer></script>
+  <script src="collab.js?v=4cefafdd" defer></script>
 </body>
 </html>

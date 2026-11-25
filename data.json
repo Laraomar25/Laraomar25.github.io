@@ -386,7 +386,8 @@
   "email": "laraomar256@gmail.com",
   "linkedin": null,
   "github": "https://github.com/Laraomar25",
-  "cv": "cv/Lara-Alothmani-CV.pdf"
+  "cv": "cv/Lara-Alothmani-CV.pdf",
+  "collab_api": "https://portfolio-collab.laraomar256.workers.dev"
  },
  "ui": {
   "skip": {

@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=e9d99564">
+  <link rel="stylesheet" href="style.css?v=cfc3739b">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -346,8 +346,35 @@
         <div class="mail">
           <a class="mail-link" href="mailto:laraomar256@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg><span dir="ltr">laraomar256@gmail.com</span></a>
           <button class="copy" type="button" data-copy="laraomar256@gmail.com" data-done="تم النسخ"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>نسخ</span></button>
-        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>تحميل السيرة الذاتية</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>حسابي على GitHub<span class="sr-only"> (يفتح في نافذة جديدة)</span></a>
+        </div><a class="btn-ghost light" href="cv/Lara-Alothmani-CV.pdf" download="Lara-Alothmani-CV.pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>تحميل السيرة الذاتية</a><a class="btn-ghost light" href="https://github.com/Laraomar25" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.9 5.7 5.6 6a3 3 0 0 0-.8 2.3V21"/></svg>حسابي على GitHub<span class="sr-only"> (يفتح في نافذة جديدة)</span></a><button class="btn-demo collab-btn" type="button" aria-expanded="false" aria-controls="collab-form"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="9" r="3.2"/><circle cx="16" cy="9" r="3.2"/><path d="M2.5 19c.4-3 2.5-4.8 5.5-4.8 1.6 0 3 .5 4 1.4 1-.9 2.4-1.4 4-1.4 3 0 5.1 1.8 5.5 4.8"/></svg>اقترح تعاونًا</button>
         </div>
+        <form class="collab-form" id="collab-form" data-api="https://portfolio-collab.laraomar256.workers.dev" aria-labelledby="collab-t" novalidate hidden>
+          <h3 id="collab-t">طلب تعاون</h3>
+          <fieldset>
+            <div class="collab-row">
+              <div class="collab-field"><label for="collab-name">الاسم الكامل</label><input id="collab-name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="collab-name-err"><p class="collab-err" id="collab-name-err" hidden></p></div>
+              <div class="collab-field"><label for="collab-email">البريد الإلكتروني</label><input id="collab-email" name="email" type="email" dir="ltr" autocomplete="email" maxlength="254" required aria-describedby="collab-email-err"><p class="collab-err" id="collab-email-err" hidden></p></div>
+            </div>
+            <div class="collab-field"><label for="collab-idea">وصف مختصر لفكرة التعاون</label><textarea id="collab-idea" name="idea" rows="5" maxlength="2000" required aria-describedby="collab-idea-err"></textarea><p class="collab-err" id="collab-idea-err" hidden></p></div>
+            <div class="collab-field">
+              <span class="collab-label">مرفق PDF (وصف المشروع أو نموذج عمل، حتى 5 MB)</span>
+              <div class="collab-file">
+                <input class="sr-only" id="collab-file" name="file" type="file" accept="application/pdf,.pdf" required aria-describedby="collab-file-name collab-file-err collab-note">
+                <label class="btn-ghost" for="collab-file"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M12 17v-5M9.5 14.5 12 12l2.5 2.5"/></svg>اختر ملف PDF</label>
+                <span class="collab-file-name" id="collab-file-name" dir="auto">لم يُختر ملف بعد</span>
+              </div>
+              <p class="collab-err" id="collab-file-err" hidden></p>
+            </div>
+            <p class="collab-note" id="collab-note">سيُحفظ الملف وبيانات الطلب في Google Drive الخاص بي لمراجعة طلبك.</p>
+          </fieldset>
+          <progress class="collab-bar" max="1" value="0" hidden aria-label="جارٍ رفع الملف…"></progress>
+          <p class="collab-status" role="status" aria-live="polite" tabindex="-1"></p>
+          <div class="collab-end">
+            <button class="btn-demo" type="submit"><span>إرسال الطلب</span></button>
+            <button class="btn-ghost collab-cancel" type="button">إغلاق</button>
+          </div>
+        </form>
+        <script type="application/json" id="collab-text">{"send": "إرسال الطلب", "sending": "جارٍ الإرسال…", "no_file": "لم يُختر ملف بعد", "preparing": "جارٍ تجهيز الطلب…", "uploading": "جارٍ رفع الملف…", "retrying": "انقطع الرفع، نعيد المحاولة…", "verifying": "جارٍ التأكد من حفظ الملف…", "success": "وصل طلبك وحُفظ الملف بنجاح. رقم الطلب: {id}", "e_check": "راجع الحقول المحدّدة ثم أعد الإرسال.", "e_name": "اكتب الاسم الكامل (من حرفين إلى 80).", "e_email": "اكتب بريدًا إلكترونيًا صحيحًا.", "e_idea": "اكتب وصفًا من 20 إلى 2000 حرف.", "e_file_missing": "أرفق ملف PDF.", "e_file_type": "يجب أن يكون المرفق ملف PDF.", "e_file_size": "حجم الملف أكبر من 5 MB.", "e_bad_file": "الملف الذي وصل ليس PDF سليمًا أو لم يصل كاملًا، ولم يُحفظ. اختر ملفًا آخر أو أعد الإرسال.", "e_rate": "أُرسلت طلبات كثيرة. حاول مجددًا بعد {n} دقيقة تقريبًا.", "e_network": "تعذّر الاتصال بالخدمة. تحقّق من الإنترنت ثم اضغط إرسال مجددًا؛ لن يتكرر طلبك.", "e_upload": "لم يكتمل رفع الملف. اضغط إرسال مجددًا للمتابعة؛ لن يتكرر طلبك.", "e_direct": "تعذّر رفع الملف مباشرة إلى Google Drive من هذا المتصفح. جرّب شبكة أو متصفحًا آخر، أو أرسل الملف بالبريد.", "e_server": "حدث خطأ أثناء حفظ الطلب ولم يتأكد الحفظ. اضغط إرسال مجددًا بعد قليل؛ لن يتكرر طلبك.", "e_off": "استقبال الطلبات غير مفعّل بعد. راسلني بالبريد الإلكتروني."}</script>
       </div>
     </section>
   </main>
@@ -363,5 +390,6 @@
   </dialog>
 
   <script src="main.js?v=fac94cc7" defer></script>
+  <script src="collab.js?v=4cefafdd" defer></script>
 </body>
 </html>
